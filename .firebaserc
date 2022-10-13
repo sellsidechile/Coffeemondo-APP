@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "coffee-mondo",
+    "coffee": "coffee-mondo"
+  },
+  "targets": {},
+  "etags": {}
+}
