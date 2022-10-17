@@ -16,6 +16,8 @@ import { ForgotComponent } from './componentes/forgot/forgot.component';
 import { MostrarComponent } from './componentes/dashboard/mostrar.component';
 import { RegisterComponent } from './componentes/Register/register.component';
 import { LoginComponent } from './componentes/Login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { LoginComponent } from './componentes/Login/login.component';
     FormsModule,
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    HttpClientModule,
+    OAuthModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

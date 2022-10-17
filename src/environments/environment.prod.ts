@@ -16,7 +16,7 @@ export const environment = {
   production: true,
   firebaseConfig: {
     apiKey: "AIzaSyDQW_UddVrTb2dE-JqHn3UP6LPkrObdbtU",
-    authDomain: "coffeemondo.app",
+    authDomain: "coffee-mondo.firebaseapp.com",
     databaseURL: "https://coffee-mondo-default-rtdb.firebaseio.com",
     projectId: "coffee-mondo",
     storageBucket: "coffee-mondo.appspot.com",
