@@ -44,8 +44,7 @@ export class ForgotComponent implements OnInit {
         icon:"success"
       })
     })
-    .catch(err => {
-      console.log(err)
+    .catch( () => {
       Swal.fire({
         title:"Error en el correo",
         icon:"error",

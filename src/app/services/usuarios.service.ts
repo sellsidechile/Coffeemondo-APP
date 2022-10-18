@@ -36,8 +36,7 @@ export class UsuariosService {
       this.angularFirestore
         .collection("Usuarios")
         .add(usuarios)
-        .then((response)=>{
-          console.log(response)
+        .then( ()=>{
         },
         (error)=>{
           reject(error)
@@ -66,8 +65,7 @@ export class UsuariosService {
   forgotPassword(email : string){
     this.fireAuth.sendPasswordResetEmail(email).then(() => {
       this.router.navigate(['/varify-email']);
-    }, err => {
-      console.log(err);
+    }, () => {
     })
   }
 
