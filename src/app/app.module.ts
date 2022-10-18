@@ -12,12 +12,18 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 
 import { AppComponent } from './app.component';
 import { IndexComponent } from './componentes/index/index.component';
-import { ForgotComponent } from './componentes/forgot/forgot.component';
+import { ForgotComponent } from './componentes/Usuarios/forgot/forgot.component';
 import { MostrarComponent } from './componentes/dashboard/mostrar.component';
-import { RegisterComponent } from './componentes/Register/register.component';
-import { LoginComponent } from './componentes/Login/login.component';
+import { RegisterComponent } from './componentes/Usuarios/Register/register.component';
+import { LoginComponent } from './componentes/Usuarios/Login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +46,12 @@ import { OAuthModule } from 'angular-oauth2-oidc';
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideAuth(() => getAuth()),
     HttpClientModule,
-    OAuthModule.forRoot()
+    OAuthModule.forRoot(),
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
