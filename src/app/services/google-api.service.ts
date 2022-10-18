@@ -2,11 +2,7 @@ import { Injectable } from '@angular/core';
 import { AuthConfig, OAuthService } from 'angular-oauth2-oidc';
 
 const oAuthConfig: AuthConfig = {
-<<<<<<< HEAD
-  issuer: 'accounts.google.com',
-=======
   issuer: 'https://accounts.google.com/',
->>>>>>> 873679ea983a054702cb1770cc50af3dc730bc69
   strictDiscoveryDocumentValidation: false,
   redirectUri: window.location.origin,
   clientId:
@@ -32,15 +28,6 @@ export class GoogleApiService {
             } else {
               oAuthService
                 .loadUserProfile()
-<<<<<<< HEAD
-                .then( () => {})
-                .catch( () => {});
-            }
-          })
-          .catch( () => {});
-      })
-      .catch( () => {});
-=======
                 .then((userProfile) => {
                   console.log(JSON.stringify(userProfile));
                 })
@@ -65,6 +52,5 @@ export class GoogleApiService {
           err
         );
       });
->>>>>>> 873679ea983a054702cb1770cc50af3dc730bc69
   }
 }
