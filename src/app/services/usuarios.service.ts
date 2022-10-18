@@ -65,7 +65,12 @@ export class UsuariosService {
   forgotPassword(email : string){
     this.fireAuth.sendPasswordResetEmail(email).then(() => {
       this.router.navigate(['/varify-email']);
+<<<<<<< HEAD
     }, () => {
+=======
+    }, err => {
+      console.log(err);
+>>>>>>> 873679ea983a054702cb1770cc50af3dc730bc69
     })
   }
 

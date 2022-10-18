@@ -36,7 +36,11 @@ onClick(){
         confirmButtonText: "Si, estoy seguro."
       }).then( (result)=> {
         if (result.isConfirmed) {
+<<<<<<< HEAD
           this.router.navigate(['/index']);
+=======
+          this.router.navigate(['/login']);
+>>>>>>> 873679ea983a054702cb1770cc50af3dc730bc69
         }
         
       })

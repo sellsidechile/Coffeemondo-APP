@@ -63,7 +63,12 @@ export class RegisterComponent implements OnInit {
 
   onFace() {
     this.userService.loginWithFacebook()
+<<<<<<< HEAD
     .then( () => {
+=======
+    .then(response => {
+      console.log(response);
+>>>>>>> 873679ea983a054702cb1770cc50af3dc730bc69
       this.router.navigate(['/dashboard']);
     })
     .catch( () => {

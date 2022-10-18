@@ -23,6 +23,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+<<<<<<< HEAD
+=======
+import { FooterComponent } from './componentes/footer/footer.component';
+>>>>>>> 873679ea983a054702cb1770cc50af3dc730bc69
 
 
 @NgModule({
@@ -32,7 +36,8 @@ import { MatCardModule } from '@angular/material/card';
     RegisterComponent,
     LoginComponent,
     IndexComponent,
-    ForgotComponent
+    ForgotComponent,
+    FooterComponent,
 
   ],
   imports: [
