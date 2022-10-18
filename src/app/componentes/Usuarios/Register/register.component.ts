@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { authState } from '@angular/fire/auth';
 import { FormControl, FormGroup } from '@angular/forms'
 import { Router } from '@angular/router';
-import { UsuariosService } from '../../services/usuarios.service';
+import Swal from 'sweetalert2';
+import { UsuariosService } from '../../../services/usuarios.service';
 
 
 @Component({
@@ -29,29 +31,47 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     this.userService.register(this.formReg.value)
-      .then(response => {
-        console.log(response);
-        this.router.navigate(['/login']);
+      .then( () => {
+        Swal.fire({
+          text:"Se ha registrado de forma exitosa.",
+          icon:"success"
+        }).then( () => {
+          this.router.navigate(['/login']);
+        })
       })
-      .catch(error => console.log(error));
+      .catch( () => {
+        Swal.fire({
+          title:"Error al registrar los datos",
+          text:"El formato de correo no es correcto o su contraseña no cumple los parametros.",
+          icon:"error"
+        })
+      })
   }
 
   onClick() {
     this.userService.loginWithGoogle()
-      .then(response => {
-        console.log(response);
+      .then( () => {
         this.router.navigate(['/dashboard']);
       })
-      .catch(error => console.log(error))
+      .catch( () => {
+        Swal.fire({
+          text:"Error al registrarse con Google",
+          icon:"error"
+        })
+      })
   }
 
-  onFace(){
+  onFace() {
     this.userService.loginWithFacebook()
     .then(response => {
       console.log(response);
       this.router.navigate(['/dashboard']);
     })
-    .catch(error => console.log(error))
+    .catch( () => {
+      Swal.fire({
+        text:"Error al registrarse con Facebook",
+        icon:"error"
+      })
+    })
   }
-
 }

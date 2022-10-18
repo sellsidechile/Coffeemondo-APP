@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GoogleApiService } from './services/google-api.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularcoffeemondo';
+
+  constructor(private readonly google: GoogleApiService){}
 }

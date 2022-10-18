@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Auth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, signOut, FacebookAuthProvider } from '@angular/fire/auth';
+import { AngularFireAuth } from '@angular/fire/compat/auth'
+import { Router } from '@angular/router';
 
 import { Usuarios } from '../usuarios.model';
+import { sendEmailVerification, sendPasswordResetEmail } from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +15,9 @@ export class UsuariosService {
 
   constructor(
     private angularFirestore : AngularFirestore,
-    private auth: Auth
+    private auth: Auth,
+    private fireAuth : AngularFireAuth, 
+    private router  : Router
   ) { }
 
   getUsuarios(){
@@ -58,6 +63,14 @@ export class UsuariosService {
     .delete();
   }
 
+  forgotPassword(email : string){
+    this.fireAuth.sendPasswordResetEmail(email).then(() => {
+      this.router.navigate(['/varify-email']);
+    }, err => {
+      console.log(err);
+    })
+  }
+
 
 
 
@@ -66,6 +79,9 @@ export class UsuariosService {
   }
   login({ email, password }: any) {
     return signInWithEmailAndPassword(this.auth, email, password);
+  }
+  forgot({ email }: any) {
+    return sendPasswordResetEmail(this.auth ,email);
   }
 
   loginWithGoogle() {
