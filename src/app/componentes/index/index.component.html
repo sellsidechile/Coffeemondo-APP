@@ -1,74 +1,79 @@
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos</title>
-</head>
 
-
-<nav class="nav-wrapper">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo right">
-        <img src="../../../assets/logo.png" alt="Avatar Logo" style="width:60px;" class="rounded-pill">
-      </a>
-
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="login">Iniciar Sesión</a></li>
-        <li><a href="registro">Registrarse</a></li>
+<nav class="navbar navbar-expand-lg fondo">
+  <div class="container-fluid d-flex justify-content-between">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="login">Iniciar Sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="registro">Registro</a>
+        </li>
       </ul>
-
-      <a href="#" data-target="responsive-menu" class="sidenav-trigger">
-        <i class="material-icons">menu</i>
-      </a>
     </div>
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+    </a>
+  </div>
 </nav>
 
 
 
 <div class="container-fluid">
-    <div class="row d-flex justify-content-around">
-      <div class="col card hoverable">
-        <div class="card-image">
-          <img src="../../../assets/MISION.png">
-          <span class="card-title">MISIÓN</span>
-        </div>
-        <div class="card-content">
-          <p>CONTRIBUIR A LA INDUSTRIA DEL CAFE, mejorando el mercado del café tomando
-            en cuenta las necesidades reales consumidor MÁS FEEDBACK = MEJOR SERVICIO</p>
-        </div>
+  <div class="row">
+    <!-- <div class="card hoverable">
+      <div class="card-image">
+        <img src="../../../assets/MISION.png">
+        <span class="card-title">MISIÓN</span>
       </div>
-    
-      <div class="col card hoverable">
-        <div class="card-image">
-          <img src="../../../assets/VISION.png">
-          <span class="card-title">VISIÓN</span>
-        </div>
-        <div class="card-content">
-          <p>Ser líderes en el manejo y uso de la información recibida por consumidores de café
-            para que a través de ella podamos mejorar la experiencia y el mercado en Chile</p>
-        </div>
+      <div class="card-content">
+        <p>CONTRIBUIR A LA INDUSTRIA DEL CAFE, mejorando el mercado del café tomando
+          en cuenta las necesidades reales consumidor MÁS FEEDBACK = MEJOR SERVICIO</p>
       </div>
-    
-      <div class="col card hoverable">
-        <div class="card-image">
-          <img src="../../../assets/PROPOSITO.png">
-          <span class="card-title">PROPÓSITO</span>
-        </div>
-        <div class="card-content">
-          <p>Mejorar y aportar a la industria del café y a la experiencia del consumidor
-            Con un Posicionamiento claro: entregar el mejor feedback para la industria del café en chile</p>
-        </div>
-    
+    </div> -->
+    <div class="card hoverable shadow-lg p-3 mb-5 bg-body rounded" style="width: 24rem;">
+      <div class="card-image">
+
+        <img src="../../../assets/MISION.png" class="card-img-top" style="margin-top: 1rem;" alt="...">
+        <span class="card-title fs-4" style="position: absolute;top: 75%;left: 10%;color: white;">MISIÓN</span>
       </div>
-    
+      <div class="card-body">
+        <p class="card-text mt-3">CONTRIBUIR A LA INDUSTRIA DEL CAFE, mejorando el mercado del café tomando
+          en cuenta las necesidades reales consumidor MÁS FEEDBACK = MEJOR SERVICIO.</p>
+      </div>
+    </div>
+    <div class="col-3 card hoverable shadow-lg p-3 mb-5 bg-body rounded" style="width: 24rem;">
+      <div class="card-image">
+
+        <img src="../../../assets/VISION.png" class="card-img-top" style="margin-top: 1rem;" alt="...">
+        <span class="card-title fs-4" style="position: absolute;top: 75%;left: 10%;color: white;">VISIÓN</span>
+      </div>
+      <div class="card-body">
+        <p class="card-text mt-3">Ser líderes en el manejo y uso de la información recibida por consumidores de café
+          para que a través de ella podamos mejorar la experiencia y el mercado en Chile.</p>
+      </div>
+    </div>
+    <div class="col-3 card hoverable shadow-lg p-3 mb-5 bg-body rounded" style="width: 24rem;">
+      <div class="card-image">
+
+        <img src="../../../assets/PROPOSITO.png" class="card-img-top" style="margin-top: 1rem;" alt="...">
+        <span class="card-title fs-4" style="position: absolute;top: 75%;left: 10%;color: white;">PROPÓSITO</span>
+      </div>
+      <div class="card-body">
+        <p class="card-text mt-3 ">Mejorar y aportar a la industria del café y a la experiencia del consumidor
+          Con un Posicionamiento claro: entregar el mejor feedback para la industria del café en chile.</p>
+      </div>
     </div>
   </div>
-  
-  
-  
-  <script>
-    M.AutoInit();
-  </script>
-  
+</div>
+
+
+
+<script>
+  M.AutoInit();
+</script>

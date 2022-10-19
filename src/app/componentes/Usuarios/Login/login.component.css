@@ -243,3 +243,17 @@ button.social-signin.google img {
   width: 100%;
   text-align: end; 
 }
+
+@media(min-width: 458px) {
+  .container{
+      width: 100%;
+      max-width: 1500px;
+
+  }
+
+  .botones{
+    max-width: 100%;
+
+    justify-content: right;
+  }
+}
