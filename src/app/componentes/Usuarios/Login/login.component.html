@@ -4,10 +4,12 @@
     <div class="loginInfo">
       <h1>INGRESAR</h1>
       <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+        <label for="Email" class="text-light mb-3 ms-5 fs-5">Email</label>
         <input type="text" id="email" class="form-control" placeholder="E-mail" formControlName="email" />
+        <label for="Password" class="text-light mb-3 ms-5 fs-5">Contraseña</label>
         <input type="password" id="password" class="form-control" placeholder="Contraseña" formControlName="password" />
-        <label class="forgot"> <a routerLink="/forgot">Olvidaste tu contraseña?</a></label>
-        <div class="botones">
+        <label class="forgot fs-6" style="text-align: center;margin-left: 7px;"> <a routerLink="/forgot">Olvidaste tu contraseña?</a></label>
+        <div class="botones" style="text-align: center;">
           <input type="submit" id="login" name="login_submit" value="Ingresar" />
           <input type="button" value="Registrarse" routerLink="/registro">
         </div>
