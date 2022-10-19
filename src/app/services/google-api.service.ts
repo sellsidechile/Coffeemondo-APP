@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AuthConfig, OAuthService } from 'angular-oauth2-oidc';
 
 const oAuthConfig: AuthConfig = {
-  issuer: 'https://accounts.google.com/',
+  issuer: 'accounts.google.com',
   strictDiscoveryDocumentValidation: false,
   redirectUri: window.location.origin,
   clientId:
