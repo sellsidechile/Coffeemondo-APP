@@ -3,7 +3,7 @@ export const environment = {
   production: true,
   firebaseConfig: {
     apiKey: "AIzaSyAp5D6hgldoFCggq7c2sj5_d9LuRGHQFvc",
-    authDomain: "coffeemondo-365813.firebaseapp.com",
+    authDomain: "coffeemondo.app",
     projectId: "coffeemondo-365813",
     storageBucket: "coffeemondo-365813.appspot.com",
     messagingSenderId: "661225577781",

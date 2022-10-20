@@ -6,9 +6,9 @@ const oAuthConfig: AuthConfig = {
   strictDiscoveryDocumentValidation: false,
   redirectUri: window.location.origin,
   clientId:
-    '313404942414-llsvcmel7h1hemblmjrp1s34h1ji6qvj.apps.googleusercontent.com',
+    '661225577781-0l62ursjv9jgo1fr2220qej4ehdb33s9.apps.googleusercontent.com',
   scope:
-    'openid profile email /auth/userinfo.profile /auth/gmail.labels /auth/gmail.send /auth/gmail.readonly',
+    'openid profile email /auth/userinfo.profile /auth/gmail.labels',
 };
 
 @Injectable({
