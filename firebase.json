@@ -1,10 +1,6 @@
 {
   "hosting": {
-    "rewrites":[{
-      "source": "**",
-      "destination": "/index.html"
-    }],
-    "public": "dist/angularcoffeemondo",
+    "public": "dist\\angularcoffeemondo",
     "ignore": [
       "firebase.json",
       "**/.*",
