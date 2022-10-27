@@ -1,0 +1,11 @@
+{
+    "queryInput": {
+      "text": {
+        "text": "Hola"
+      },
+      "languageCode": "es"
+    },
+    "queryParams": {
+      "timeZone": "America/Los_Angeles"
+    }
+  }
