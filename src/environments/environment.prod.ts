@@ -11,7 +11,7 @@
   },
   production: true
 }; */
-
+//Ambiente de prueba para subir a la pagina
 export const environment = {
   production: true,
   firebaseConfig: {
