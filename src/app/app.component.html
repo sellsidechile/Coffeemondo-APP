@@ -1,2 +1,17 @@
+
+<app-navbar-loggeado (sideNavToggled)="sideNavStatus = $event;">
+
+</app-navbar-loggeado>
+
+    <main>
+        <app-sidenav [sideNavStatus]="sideNavStatus" [ngClass]="{'app-sidenav-open' : sideNavStatus}">
+            <div class="display-area p-3">
+                <p class="fs-1 fw-bold fst-italic">
+
+                </p>
+            </div>
+        </app-sidenav>
+    </main>
+
 <router-outlet></router-outlet>
 <app-footer></app-footer>
