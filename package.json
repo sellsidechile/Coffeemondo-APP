@@ -23,7 +23,12 @@
     "@angular/router": "^14.1.0",
     "angular-oauth2-oidc": "^13.0.1",
     "bootstrap": "^5.2.1",
+<<<<<<< HEAD
     "firebase": "^9.12.1",
+=======
+    "chart.js": "^3.9.1",
+    "firebase": "^9.10.0",
+>>>>>>> ab2456edfa32b14e60c2f46651d85f24052cfe29
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.5.1",
     "tslib": "^2.3.0",
