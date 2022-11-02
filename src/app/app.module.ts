@@ -25,7 +25,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { ChartComponent } from './componentes/chart/chart.component';
-
 import { NavbarLoggeadoComponent } from './componentes/navbar-loggeado/navbar-loggeado.component';
 import { SidenavComponent } from './componentes/sidenav/sidenav.component';
 

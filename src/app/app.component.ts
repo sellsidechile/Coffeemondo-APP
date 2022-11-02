@@ -7,8 +7,7 @@ import { GoogleApiService } from './services/google-api.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  sideNavStatus: boolean= false;
+  constructor(private readonly google: GoogleApiService){}
   title = 'angularcoffeemondo';
 
-  constructor(private readonly google: GoogleApiService){}
 }

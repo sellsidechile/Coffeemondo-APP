@@ -1,14 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import {Chart} from 'node_modules/chart.js';
+import {  Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Chart } from 'node_modules/chart.js';
 import { registerables } from 'chart.js'; 
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+import { UsuariosService } from '../../services/usuarios.service';
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.scss']
 })
 export class ChartComponent implements OnInit {
-
-  constructor() { }
+  menuStatus: boolean= false;
+  @Input() sideNavStatus: boolean = false;
+  @Output() sideNavToggled = new EventEmitter<boolean>();
+  constructor( 
+    private usuariosService : UsuariosService,
+    private router : Router) { }
 
   ngOnInit(): void {
     Chart.register(...registerables); 
@@ -47,5 +54,29 @@ export class ChartComponent implements OnInit {
       }
     });
   }
-
+  sideNavToggle() {
+    this.menuStatus = !this.menuStatus;
+    this.sideNavToggled.emit(this.menuStatus);
+  }
+  onClick(){
+    this.usuariosService.logout()
+      .then(()=>{
+        Swal.fire({
+          title:"¿Estas seguro?",
+          text:"Si cierra sesion va a tener que volver a identificarse.",
+          icon:"warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Si, estoy seguro."
+        }).then( (result)=> {
+          if (result.isConfirmed) {
+            this.router.navigate(['/index']);
+          }
+          
+        })
+      })
+      .catch( () => {});
+  }
+  
 }
