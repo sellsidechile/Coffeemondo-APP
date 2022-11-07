@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { UsuariosService } from '../../services/usuarios.service';
 import { Usuarios } from '../../usuarios.model';
 import { Router } from '@angular/router';
@@ -16,16 +15,12 @@ export class MostrarComponent implements OnInit {
   @Input() sideNavStatus: boolean = false;
   @Output() sideNavToggled = new EventEmitter<boolean>();
 
-  menuStatus: boolean= false;
-  @Input() sideNavStatus: boolean = false;
-  @Output() sideNavToggled = new EventEmitter<boolean>();
-
-
 constructor(
   private usuariosService : UsuariosService,
   private router : Router
   ){ }
 ngOnInit(): void {
+  
 }
 sideNavToggle() {
   this.menuStatus = !this.menuStatus;
