@@ -1,39 +1,242 @@
-.card{
-  margin-top: 20px;
-  width: 400px;
-  height: 700px;
-  background-color: rgb(255, 255, 255, 0.8);
-  }
-  .card-image{
-      margin-top: 5px;
-      width: 100%;
-      height: 80%;
-  }
-  .card .card-image img{
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-  } 
-  .col{
-      align-items: center;
-      justify-content: center;
-  }
-  .row{
-      align-items: center;
-      justify-content: center;
-      background-color: #330E58;
-      height: 100%;
-      gap:100px;
-  }
-  .card-title{
-      font-family: 'THEBOLDFONT 2022';
-      
-  }
-
-  .fondo{
-    background-color: #D25B37;
-    color: #fff;
-}
-.navbar{
+.navbar {
     max-width: 101%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(0deg, #ffffff00 0%, rgba(247, 77, 42) 100%);
+    backdrop-filter: blur(0px);
+    height: 200px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collapse{
+
+}
+.logonav {
+    width: 100px;
+    height: 100px;
+}
+
+.titleHead {
+    font-family: "CookieRun Bold";
+    color: #F0DDB5;
+    font-size: 35px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 0px 100px;
+
+}
+
+
+.nav-link {
+    font-size: 20px;
+    font-family: "CookieRun Bold";
+    color: #fff;
+    height: 100%;
+
+}
+.nav-item{
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid #fff;
+}
+.logos{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 100px;
+    width: 210px;
+
+}
+.imagen{
+    height: 1100px;
+}
+.informacion{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+
+}
+.imagena{
+    position: relative;
+    
+}
+.imagenContainer{
+    display: flex;
+    flex-direction: row;
+}
+.textotop{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: #fff;
+    font-family: "CookieRun Bold";
+    font-size: 25px;
+}
+.textobottom{
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    color: #fff;
+    
+}
+.imageninfo{
+    height: 250px;
+    width: 700px;
+}
+.videont{
+    margin-top: 50px;
+}
+.logotext{
+    font-family: "CookieRun Bold";
+    color: #F0DDB5;
+    font-size: 35px;
+}
+.containerlogo{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    width: 100%;
+}
+.logo{
+    width: 170px;
+    height: 170px;
+    margin-top: 80px;
+}
+.textocoffe{
+    color: #F0DDB5;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 0px 50px;
+}
+.disponibletext{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 60px;
+}
+.dispologos{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 70px;
+}
+.logodownload{
+    width: 320px;
+    height: 100px;
+    margin-top: 40px;
+}
+.appstore{
+    margin-right: 50px;
+    border-radius: 14px;
+}
+.textservices{
+    color: #61269c;
+}
+.containerservice{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    background-color: #F0DDB5;
+    width: 100%;
+    padding-bottom: 100px;
+}
+.textservices{
+    font-size: 30px;
+    margin: 60px 0px;
+    font-family: "PTSans-Bold";
+}
+.rowserv{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+}
+.contserving {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-rows: repeat(2, 1fr);
+  }
+.imgserv{
+    width: 400px;
+}
+.archivements{
+
+}
+.contArchivements{
+    width: 100%;
+    height: fit-content;
+    background-image: url(../../../assets/coffe.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+}
+.colArchivements{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    background-color: #f0ddb5c8 ;
+    width: 1200px;
+    padding: 100px 50px 20px 50px;
+    margin-top: 380px;
+}
+.rowArchivements{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: row;
+    width: 100%;
+}
+.relArchv{
+    position: relative;
+}
+.textArchv{
+    position: absolute;
+    bottom: 13px;
+    left: 40%;
+    font-family: "PTSans-Bold";
+    color: #fff;
+    font-size:15px;
+}
+.practice{
+    margin-bottom: 50px;
+    font-family: "PTSans-Bold";
+    color: #61269c;
+    font-size: 30px;
+}
+.knowArchv{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.knowArchv span{
+    font-family: "PTSans-Bold";
+    color: #61269c;
+    font-size: 15px;
+}
+.knowing{
+    
 }
