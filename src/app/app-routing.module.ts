@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path:'dashboard',
     component: MostrarComponent,
-    ...canActivate(() => redirectUnauthorizedTo(['/registro']))
+    ...canActivate(() => redirectUnauthorizedTo(['/index']))
   },
   {path: 'login', component:LoginComponent},
   {path: 'registro', component:RegisterComponent},
