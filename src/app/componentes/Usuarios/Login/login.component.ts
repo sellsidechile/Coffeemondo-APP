@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { UsuariosService } from '../../../services/usuarios.service';
+declare var window: any;
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,8 @@ import { UsuariosService } from '../../../services/usuarios.service';
 export class LoginComponent implements OnInit {
 
   formLogin: FormGroup;
+  formModalLog: any;
+  modalLogin: any;
 
   constructor(
     private userService: UsuariosService,
@@ -25,6 +28,8 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.formModalLog = new window.bootstrap.Modal(
+      document.getElementById("modalregister"))
   }
 
   onSubmit() {
@@ -34,56 +39,66 @@ export class LoginComponent implements OnInit {
       if (this.formLogin.get("email").hasError("email")) errormsg = "El formato del correo no es valido"
       if (this.formLogin.get("email").hasError("required")) errormsg = "El campo email es obligatorio"
       Swal.fire({
-        text:errormsg,
-        icon:"error"
+        text: errormsg,
+        icon: "error"
       })
       return
     }
     Swal.fire("Cargando")
     Swal.showLoading()
     this.userService.login(this.formLogin.value)
-      .then( () => {
+      .then(() => {
         Swal.fire({
-          text:"Se ha auntenticado de manera correcta",
-          icon:"success"
-        }).then( ()=> {
-          this.router.navigate(['/dashboard']);
+          text: "Se ha auntenticado de manera correcta",
+          icon: "success"
         })
+        this.goToDashboard();
       })
       .catch(err => {
 
         Swal.fire({
-          title:"Error al autentificarse",
-          icon:"error",
-          text:"Su correo o contraseña no son validos"
+          title: "Error al autentificarse",
+          icon: "error",
+          text: "Su correo o contraseña no son validos"
         })
       });
   }
 
   onClick() {
     this.userService.loginWithGoogle()
-      .then( () => {
-        this.router.navigate(['/dashboard']);
+
+      .then(() => {
+        this.goToDashboard();
       })
-      .catch( () => {
+      .catch(() => {
         Swal.fire({
-          text:"Error al ingresar con Google",
-          icon:"error"
+          text: "Error al ingresar con Google",
+          icon: "error"
         })
       })
   }
 
-  onFace(){
+  onFace() {
     this.userService.loginWithFacebook()
-    .then( () => {
-      this.router.navigate(['/dashboard']);
-    })
-    .catch(error => {
-      Swal.fire({
-        text:"Error al ingresar con Facebook",
-        icon:"error"
+      .then(() => {
+        this.goToDashboard();
       })
-    })
+      .catch(error => {
+        Swal.fire({
+          text: "Error al ingresar con Facebook",
+          icon: "error"
+        })
+      })
+  }
+  openModelLog() {
+    this.formModalLog.show();
+  }
+  doSomethingLog() {
+    this.formModalLog.hide()
   }
 
+  private goToDashboard() {
+    this.router.navigate(['/dashboard']);
+  }
 }
+

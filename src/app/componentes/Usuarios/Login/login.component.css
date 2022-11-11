@@ -1,4 +1,104 @@
-*:focus {
+.container {
+  background-image: url(../../../../assets/ingreso.png);
+  width: 771px;
+  height: 479px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ingreso {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.ingreso span {
+  font-family: "PTSans-Bold";
+  color: #61269c;
+}
+
+.loginBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 75px;
+
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input[type="email"],
+input[type="password"] {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #FB5825;
+  width: 400px;
+  margin: 10px;
+  height: 50px;
+  padding-left: 50px;
+}
+input[type="email"]:focus-visible,
+input[type="password"]:focus-visible{
+ outline: none;
+}
+.botons{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.submit {
+  background-image: url("../../../../assets/boton.svg");
+  border: none;
+  background-color: #eadfb0;
+  width: 334px;
+  height: 63px;
+  color: #fff;
+  font-family: "PTSans-Bold";
+}
+
+.soyNuevo {
+  background-image: url("../../../../assets/botontrans.png");
+  border: none;
+  background-color: #eadfb0;
+  width: 324px;
+  height: 77px;
+  color: #61269c;
+  font-family: "PTSans-Bold";
+}
+.contform{
+  position: relative;
+  
+}
+.contform img{
+  position: absolute;
+  left: 15px;
+  bottom: 20px;
+}
+.social-signin{
+  border: none;
+  background-color: #ffffff00;
+  margin-top: 10px;
+  width: 310px;
+  margin-left: 200px;
+
+}
+/* *:focus {
   outline: none;
 }
 
@@ -256,4 +356,4 @@ button.social-signin.google img {
 
     justify-content: right;
   }
-}
+} */

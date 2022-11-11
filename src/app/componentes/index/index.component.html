@@ -49,22 +49,27 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">
-            MENÚ 1
+          <a class="nav-link" (click)="openModelLog()" >
+            INGRESO
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">
-            MENÚ 2
+          <a class="nav-link" (click)="openModelReg()" >
+            REGISTRO
           </a>
         </li>
       </ul>
       <ul class="logos">
         <li>
-          <img src="../../../assets/facebook.png" alt="facebook" class="facebook" width="40" height="40">
+          <a href="https://www.facebook.com/coffeemondoapp">
+            <img src="../../../assets/facebook.png" alt="facebook" class="facebook" width="40" height="40"> 
+          </a>
+          
         </li>
         <li>
+          <a href="https://www.instagram.com/coffeemondo.cl/?hl=es">
           <img src="../../../assets/instagram.png" alt="instagram" class="instagram" width="40" height="40">
+        </a>
         </li>
       </ul>
     </div>
@@ -93,9 +98,7 @@
   <div class="containerlogo">
     <img src="../../../assets/logo.png" class="logo">
     <span class="logotext">COFFEE<br /> MONDO</span>
-    <span class="textocoffe">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-      aliquip ex ea commodo consequat.</span>
+    <span class="textocoffe">Aceleramos la transformación digital de las cafeterías, y les proveemos con datos de calidad de su negocio y sobre su industria</span>
     <span class="disponibletext">Disponible en:</span>
   </div>
   <div class="dispologos">
@@ -147,3 +150,20 @@
 </div>
 
 <app-footer></app-footer>
+
+<div class="modal" id="modallogin" data-backdrop="false">
+  <div class="modal-dialog modal-dialog-centered" style="max-width:771px; max-height:479px;">
+    <div class="modal-content" >
+      <app-login></app-login>
+
+    </div>
+  </div>
+</div>
+<div class="modal" id="modalregister"  data-backdrop="false">
+  <div class="modal-dialog modal-dialog-centered" style="max-width:771px; max-height:479px;">
+    <div class="modal-content" >
+      <app-register></app-register>
+    </div>
+  </div>
+</div>
+

@@ -20,7 +20,8 @@ constructor(
   private router : Router
   ){ }
 ngOnInit(): void {
-  
+  document.getElementsByClassName('modal-backdrop')[0].classList.remove('modal-backdrop')
+
 }
 sideNavToggle() {
   this.menuStatus = !this.menuStatus;

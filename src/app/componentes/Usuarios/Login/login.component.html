@@ -1,34 +1,32 @@
-
 <div class="container">
-  <div id="login-box">
-    <div class="loginInfo">
-      <h1>INGRESAR</h1>
-      <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
-        <label for="Email" class="text-light mb-3 ms-5 fs-5">Email</label>
-        <input type="text" id="email" class="form-control" placeholder="E-mail" formControlName="email" />
-        <label for="Password" class="text-light mb-3 ms-5 fs-5">Contraseña</label>
-        <input type="password" id="password" class="form-control" placeholder="Contraseña" formControlName="password" />
-        <label class="forgot fs-6" style="text-align: center;margin-left: 7px;"> <a routerLink="/forgot">Olvidaste tu contraseña?</a></label>
-        <div class="botones" style="text-align: center;">
-          <input type="submit" id="login" name="login_submit" value="Ingresar" />
-          <input type="button" value="Registrarse" routerLink="/registro">
-        </div>
-        <div class="or">
-          <hr class="line" />
-          <span>o</span>
-          <hr class="line" />
-        </div>
-        <!-- <button class="social-signin facebook" (click)="onFace()"> <img
-          src="https://cdn-icons-png.flaticon.com/512/174/174848.png" height="20px"> Ingresa con Facebook
-        </button> -->
-        <br>
-      </form>
-      <button class="social-signin google" (click)="onClick()"> <img
-          src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
-          height="20px"> Ingresa con Google 
-      </button>
+  <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+    <div class="ingreso">
+      <span>Ingreso</span>
+    </div>
+    <div class="loginBox">
+      <div class="avatar">
+        <img src="../../../../assets/avatar.png">
+      </div>
+      <div class="form">
+        <div class="contform"><img src="../../../../assets/user.png"> <input type="email" id="email"
+            formControlName="email"></div>
+        <div class="contform"><img src="../../../../assets/candado.svg"> <input type="password" id="password"
+            formControlName="password" /></div>
+      </div>
+    </div>
+    <div class="botons">
+      <input class="submit" type="submit" id="login" name="login_submit" value="ENTRAR" data-backdrop="false">
+      <input class="soyNuevo" type="button" value="SOY NUEVO" (click)="openModelLog()" data-bs-dismiss="modal">
+    </div>
+  </form>
+  <button class="social-signin google" (click)="onClick()" > <img
+    src="../../../../assets/google.jpg"> 
+  </button>
+</div>
+<div class="modal" id="modalReg" >
+  <div class="modal-dialog modal-dialog-centered" style="max-width:771px; max-height:479px;">
+    <div class="modal-content" >
+      <app-register></app-register>
     </div>
   </div>
 </div>
-
-<app-footer></app-footer>

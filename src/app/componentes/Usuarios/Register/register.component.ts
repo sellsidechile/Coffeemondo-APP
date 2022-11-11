@@ -12,9 +12,11 @@ import { UsuariosService } from '../../../services/usuarios.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
-
+  
   formReg: FormGroup;
+  visible: boolean=true;
+  changetype: boolean=true;
+
 
   constructor(
     public userService: UsuariosService,
@@ -27,6 +29,7 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
 
   onSubmit() {
@@ -36,7 +39,7 @@ export class RegisterComponent implements OnInit {
           text:"Se ha registrado de forma exitosa.",
           icon:"success"
         }).then( () => {
-          this.router.navigate(['/login']);
+          this.router.navigate(['/index']);
         })
       })
       .catch( () => {
@@ -73,5 +76,9 @@ export class RegisterComponent implements OnInit {
         icon:"error"
       })
     })
+  }
+  myPassword() {
+    this.visible=!this.visible;
+    this.changetype=!this.changetype;
   }
 }
