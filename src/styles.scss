@@ -3,23 +3,16 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 body{
-    background-color: #330E58 !important;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    
+    background-color: #FB5825 !important;
+}
+
+@font-face {
+    font-family: CookieRun Bold;
+    src: url('../src/assets/CookieRun\ Bold.otf');
 }
 @font-face {
-    font-family: THEBOLDFONT 2022;
-    src: url('../src/assets/THEBOLDFONT\ 2022.otf');
+    font-family: PTSans-Bold;
+    src: url('../src/assets/PTSans-Bold.ttf');
 }
-@font-face {
-    font-family: TS Block Bold;
-    src: url('../src/assets/TS\ Block\ Bold.ttf');
-}
-h1 {
-    color: #DAD1AA;
-    font-family: 'TS Block Bold';
-    font-size: 30px;
-    margin-bottom: 40px;
-  }
+
+

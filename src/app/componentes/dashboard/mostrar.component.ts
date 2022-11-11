@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { UsuariosService } from '../../services/usuarios.service';
 import { Usuarios } from '../../usuarios.model';
 import { Router } from '@angular/router';
@@ -12,16 +11,21 @@ import Swal from 'sweetalert2';
 })
 export class MostrarComponent implements OnInit {
   Usuarios: Usuarios[]
+  menuStatus: boolean= false;
+  @Input() sideNavStatus: boolean = false;
+  @Output() sideNavToggled = new EventEmitter<boolean>();
 
-  constructor(
-    private usuariosService : UsuariosService,
-    private router : Router
-    ){ }
-
-  ngOnInit(): void {
-
-  }
-
+constructor(
+  private usuariosService : UsuariosService,
+  private router : Router
+  ){ }
+ngOnInit(): void {
+  
+}
+sideNavToggle() {
+  this.menuStatus = !this.menuStatus;
+  this.sideNavToggled.emit(this.menuStatus);
+}
 
 onClick(){
   this.usuariosService.logout()
@@ -43,5 +47,4 @@ onClick(){
     })
     .catch( () => {});
 }
-
 }
