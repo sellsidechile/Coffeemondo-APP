@@ -1,34 +1,137 @@
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
-
-    <nav class="navbar navbar-expand px-2">
-        <div (click)="sideNavToggle()">
-        <a class="burger"><img src="../../../assets/menu.png" height="30px" width="30px"></a>
-        </div>
-        <a href="#" class="brand-logo right">
-            <img src="../../../assets/logo.png" alt="Avatar Logo" style="width:60px;" class="rounded-pill">
-        </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a (click)="onClick()">Cerrar Sesión</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <app-sidenav [sideNavStatus]="menuStatus" [ngClass]="{'app-sidenav-open' : menuStatus }">
-            <div class="display-area p-3">
-                <p class="fs-1 fw-bold fst-italic"></p>
-            </div>
-        </app-sidenav>
-    </main>
-
-    <div class="googlegraphic">
-        <iframe width="1170" height="878" src="https://datastudio.google.com/embed/reporting/bc4f0269-9b96-4504-a3b4-d4150cc23255/page/7lf3C" frameborder="0" style="border:0" ></iframe>
+<nav class="navbar navbar-expand px-2">
+    <div (click)="sideNavToggle()">
+    <a class="burger"><img src="../../../assets/menu.png" height="30px" width="30px"></a>
     </div>
+    <a href="#" class="brand-logo right">
+        <img src="../../../assets/logo.png" alt="Avatar Logo" style="width:60px;" class="rounded-pill">
+    </a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <a (click)="onClick()">Cerrar Sesión</a>
+    </ul>
+</nav>
+
+<main>
+    <app-sidenav [sideNavStatus]="menuStatus" [ngClass]="{'app-sidenav-open' : menuStatus }">
+        <div class="display-area p-3">
+            <p class="fs-1 fw-bold fst-italic"></p>
+        </div>
+    </app-sidenav>
+</main>
+
+    
+<div class="container">
+    <div class="shop">
+        <h1>Shop</h1>
+        <p>Shopify</p>
+    </div>
+    <div class="plots">
+        <h1>Plots</h1>
+
+    </div>
+    <div class="social">
+        <h1>Social</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item" *ngFor="let item of listacomentarios">
+                <div class="contenedor">
+                    <div class="usuario">
+                        
+                        <h1 style="font-size: 15px;">Nombre Usuario</h1>
+                        <h2 style="font-size: 12px;">@Nickname</h2>
+                    </div>
+            
+                    <div class="clasificacion">
+                        <h1 style="font-size: 15px;">Reseña numero: {{item.numero}}</h1>
+                        <h1 style="font-size: 15px;">clasificacion</h1>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+            
+                    <div class="comentario">
+                        <h1 style="font-size: 15px;">Comentario</h1>
+                        <p style="font-size: 13px;">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa itaque laudantium error exercitationem
+                            quasi. Excepturi laborum assumenda iusto repudiandae? Laudantium accusantium consequatur quia excepturi
+                            eveniet, explicabo voluptate molestiae velit doloribus?
+                        </p>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item active">
+                <div class="contenedor">
+                    <div class="usuario">
+                        <h1 style="font-size: 15px;">Nombre Usuario</h1>
+                        <h2 style="font-size: 12px;">@Nickname</h2>
+                    </div>
+            
+                    <div class="clasificacion">
+                        <h1 style="font-size: 15px;">Reseña numero: 1</h1>
+                        <h1 style="font-size: 15px;">clasificacion</h1>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+            
+                    <div class="comentario">
+                        <h1 style="font-size: 15px;">Comentario</h1>
+                        <p style="font-size: 13px;">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa itaque laudantium error exercitationem
+                            quasi. Excepturi laborum assumenda iusto repudiandae? Laudantium accusantium consequatur quia excepturi
+                            eveniet, explicabo voluptate molestiae velit doloribus?
+                        </p>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+    <div class="nlp">
+        <h1>NLP</h1>
+        <p>
+            Recursos Humanos 
+            <br>
+            Indice de felicidad (Analisis de sentimientos)
+        </p>
+    </div>
+    <div class="mantenimiento">
+        <h1>Mantenimiento</h1>
+        <p>Mantenimientos preventivos</p>
+    </div>
+    <div class="app">
+        <h1>APP</h1>
+        <p>Datos app</p>
+    </div>
+    <div class="cx">
+        <h1>CX</h1>
+        <p>Experiencia del cliente en la tienda
+        </p>
+    </div>
+    <div class="vision">
+        <h1>Vision</h1>
+        <p>
+            Indicador termico
+            <br>
+            Reconocimiento Facial
+            <br>
+            Reconocimiento de arte latte
+        </p>
+    </div>
+</div>
+
 
         

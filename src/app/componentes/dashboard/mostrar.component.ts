@@ -48,4 +48,21 @@ onClick(){
     })
     .catch( () => {});
 }
+listacomentarios=[
+  {
+    numero: 2,
+  },
+
+  {
+    numero: 3,
+  },
+
+  {
+    numero: 4,
+  },
+
+  {
+    numero: 5,
+  }
+]
 }
