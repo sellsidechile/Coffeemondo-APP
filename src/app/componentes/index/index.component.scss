@@ -14,9 +14,8 @@
     justify-content: center;
 }
 
-.collapse{
+.collapse {}
 
-}
 .logonav {
     width: 100px;
     height: 100px;
@@ -46,143 +45,455 @@
     height: 100%;
 
 }
-.nav-item{
+
+.nav-item {
     width: 100%;
     height: 100%;
     border-left: 1px solid #fff;
 }
-.logos{
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    flex-direction: row;
-    list-style: none;
-    margin-right: 100px;
-    width: 210px;
 
-}
-.imagen{
-    height: 1100px;
-}
-.informacion{
+/*CSS GRID */
+.container {
     width: 100%;
-    display: flex;
+    height: 100%;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+}
+
+.container .video {
+    grid-column: span 2;
+    grid-row: span 1;
     align-items: center;
-    justify-content:center;
-    flex-direction: column;
+}
+
+.container .logo {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.container .aplicacion1 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.container .aplicacion2 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/*CSS GRID */
+
+
+
+
+/*IMAGENES PRIMERA COLUMNA */
+.imagen1 {
+    position: relative;
 
 }
-.imagena{
-    position: relative;
-    
+
+.imageninfo1 {
+    width: 100%;
+    height: 100%;
+
 }
-.imagenContainer{
-    display: flex;
-    flex-direction: row;
-}
-.textotop{
+
+
+.imagen1 .textotop {
     position: absolute;
+    height: auto;
     top: 8px;
     left: 16px;
     color: #fff;
     font-family: "CookieRun Bold";
-    font-size: 25px;
+    font-size: 2vw;
 }
-.textobottom{
+
+.imagen1 .textobottom {
     position: absolute;
+    height: auto;
     bottom: 8px;
     right: 16px;
     color: #fff;
-    
+
 }
-.imageninfo{
-    height: 250px;
-    width: 700px;
+
+.imagen2 {
+    position: relative;
 }
-.videont{
-    margin-top: 50px;
+
+.imageninfo2 {
+    width: 100%;
+    height: auto;
 }
-.logotext{
+
+
+
+.imagen2 .textotop {
+    position: absolute;
+    height: auto;
+    top: 8px;
+    left: 16px;
+    color: #fff;
+    font-family: "CookieRun Bold";
+    font-size: 2vw;
+}
+
+.imagen2 .textobottom {
+    position: absolute;
+    height: auto;
+    bottom: 8px;
+    right: 16px;
+    color: #fff;
+
+}
+
+/*IMAGENES PRIMERA COLUMNA */
+
+
+/*IMAGENES SEGUNDA COLUMNA */
+.videont {
+    width: 100%;
+    height: auto;
+}
+
+/*IMAGENES SEGUNDA COLUMNA */
+
+/*TERCERA COLUMNA */
+
+.logotext {
     font-family: "CookieRun Bold";
     color: #F0DDB5;
     font-size: 35px;
 }
-.containerlogo{
+
+.containerlogo {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     flex-direction: column;
     width: 100%;
 }
-.logo{
+
+.logoimg {
     width: 170px;
     height: 170px;
     margin-top: 80px;
 }
-.textocoffe{
+
+.textocoffe {
     color: #F0DDB5;
     font-size: 30px;
     margin-top: 20px;
     padding: 0px 50px;
 }
-.disponibletext{
+
+.disponibletext {
     color: #fff;
     font-size: 20px;
     margin-top: 60px;
 }
+
+/*TERCERA COLUMNA */
+
+
+/*CUARTA COLUMNA */
+
 .dispologos{
     display: flex;
     align-items: center;
     justify-content:center;
     flex-direction: row;
-    width: 100%;
     margin-bottom: 70px;
 }
-.logodownload{
-    width: 320px;
-    height: 100px;
-    margin-top: 40px;
+
+
+.logodownload {
+width: 60%;
+height: auto;
+margin-right: 50px;
+
 }
+
 .appstore{
-    margin-right: 50px;
-    border-radius: 14px;
+width: 60%;
+height: auto;
+
+margin-left: 70px;
+border-radius: 10px;
 }
-.textservices{
+
+
+
+/*CUARTA COLUMNA */
+
+
+
+
+// .logos{
+//     display: flex;
+//     align-items: center;
+//     justify-content:space-around;
+//     flex-direction: row;
+//     list-style: none;
+//     margin-right: 100px;
+//     width: 210px;
+
+
+.imagen {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+// .informacion{
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content:center;
+//     flex-direction: column;
+
+// }
+// .imagena{
+//     position: relative;
+//     height: 100%!important;
+//     width: 100%!important;
+
+// }
+// .imagenContainer{
+//     display: flex;
+//     flex-direction: row;
+// }
+// .textotop{
+//     position: absolute;
+//     top: 8px;
+//     left: 16px;
+//     color: #fff;
+//     font-family: "CookieRun Bold";
+//     font-size: 25px;
+// }
+// .textobottom{
+//     position: absolute;
+//     bottom: 8px;
+//     right: 16px;
+//     color: #fff;
+
+// }
+// .imageninfo{
+//     height: 250px;
+//     width: 700px;
+// }
+// .videont{
+//     margin-top: 50px;
+// }
+// .logotext{
+//     font-family: "CookieRun Bold";
+//     color: #F0DDB5;
+//     font-size: 35px;
+// }
+// .containerlogo{
+//     display: flex;
+//     align-items: center;
+//     justify-content:center;
+//     flex-direction: column;
+//     width: 100%;
+// }
+// .logo{
+//     width: 170px;
+//     height: 170px;
+//     margin-top: 80px;
+// }
+// .textocoffe{
+//     color: #F0DDB5;
+//     font-size: 30px;
+//     margin-top: 20px;
+//     padding: 0px 50px;
+// }
+// .disponibletext{
+//     color: #fff;
+//     font-size: 20px;
+//     margin-top: 60px;
+// }
+// .dispologos{
+//     display: flex;
+//     align-items: center;
+//     justify-content:center;
+//     flex-direction: row;
+//     width: 100%;
+//     margin-bottom: 70px;
+// }
+// .logodownload{
+//     width: 320px;
+//     height: 100px;
+//     margin-top: 40px;
+// }
+// .appstore{
+//     margin-right: 50px;
+//     border-radius: 14px;
+// }
+
+/*CSS GRID */
+.containerservice {
+    width: 60%;
+    height: 60%;
+    margin: 20px auto;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+.containerservice .titulo {
+    grid-column: span 2;
+    grid-row: span 1;
+
+}
+
+.containerservice .servicio1 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.containerservice .servicio2 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.containerservice .servicio3 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.containerservice .servicio4 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+
+/*CSS GRID */
+
+/* .containerservice>div {
+    background: #e68264;
+    border-radius: 4px;
+} */
+
+/*TITULO */
+.textservices {
+    font-size: 30px;
+    margin: 60px 0px;
+    font-family: "PTSans-Bold";
     color: #61269c;
 }
-.containerservice{
+
+/*TITULO */
+
+
+/*PRIMERA IMAGEN */
+.servicio1 {
     display: flex;
     align-items: center;
-    justify-content:center;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.imgserv1 {
+    width: 90%;
+    height: auto;
+}
+
+/*PRIMERA IMAGEN */
+
+
+/*SEGUNDA IMAGEN */
+.servicio2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.imgserv2 {
+    width: 90%;
+    height: auto;
+}
+
+/*SEGUNDA IMAGEN */
+
+
+/*TERCERA IMAGEN */
+.servicio3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.imgserv3 {
+    width: 90%;
+    height: auto;
+}
+
+/*TERCERA IMAGEN */
+
+
+/*CUARTA IMAGEN */
+.servicio4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.imgserv4 {
+    width: 90%;
+    height: auto;
+}
+
+/*CUARTA IMAGEN */
+
+
+.containerservice {
+
     background-color: #F0DDB5;
     width: 100%;
+    height: auto;
     padding-bottom: 100px;
 }
-.textservices{
+
+.textservices {
     font-size: 30px;
     margin: 60px 0px;
     font-family: "PTSans-Bold";
 }
-.rowserv{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    flex-direction: row;
-}
-.contserving {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    grid-rows: repeat(2, 1fr);
-  }
-.imgserv{
-    width: 400px;
-}
-.archivements{
 
+// .rowserv {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: row;
+// }
+
+// .contserving {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     grid-gap: 10px;
+//     grid-rows: repeat(2, 1fr);
+// }
+
+// .imgserv {
+//     width: 400px;
+// }
+
+.archivements {
+    width: 100%;
+    height: auto;
 }
-.contArchivements{
+
+.contArchivements {
     width: 100%;
     height: fit-content;
     background-image: url(../../../assets/coffe.png);
@@ -191,76 +502,89 @@
     align-items: center;
     padding: 100px 0px;
 }
-.colArchivements{
+
+.colArchivements {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     flex-direction: column;
-    background-color: #f0ddb5c8 ;
+    background-color: #f0ddb5c8;
     width: 1200px;
     padding: 100px 50px 20px 50px;
     margin-top: 380px;
 }
-.rowArchivements{
+
+.rowArchivements {
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-direction: row;
     width: 100%;
 }
-.relArchv{
+
+.relArchv {
     position: relative;
 }
-.textArchv{
+
+.textArchv {
     position: absolute;
     bottom: 13px;
     left: 40%;
     font-family: "PTSans-Bold";
     color: #fff;
-    font-size:15px;
+    font-size: 15px;
 }
-.practice{
+
+.practice {
     margin-bottom: 50px;
     font-family: "PTSans-Bold";
     color: #61269c;
     font-size: 30px;
 }
-.knowArchv{
+
+.knowArchv {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     flex-direction: row;
     margin-top: 20px;
+
 }
-.knowArchv span{
+
+.knowArchv span {
     font-family: "PTSans-Bold";
     color: #61269c;
     font-size: 15px;
+    min-height: 70%;
 }
-.knowing{
-    
-}
-.modal{
+
+
+
+.modal {
     width: 100%;
     height: 100%;
-    
+
 }
-.modal-content{
+
+.modal-content {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0);
     border: none;
 
 }
-app-login{
+
+app-login {
     width: 100%;
     height: 100%;
 }
-.carousel-control-prev{
+
+.carousel-control-prev {
     height: 100px;
     margin-top: 500px;
 }
-.carousel-control-next{
+
+.carousel-control-next {
     height: 100px;
     margin-top: 500px;
 }

@@ -21,10 +21,16 @@ export class SidenavComponent implements OnInit {
       link: 'dashboard',
     },
     {
-      number: '1',
+      number: '3',
       name: 'Datos',
       icon: 'fa-solid fa-chart-pie',
       link: 'chart'
+    },
+    {
+      number: '4',
+      name: 'Studio',
+      icon: 'fa-solid fa-ranking-star',
+      link: 'studio'
     }
   ]
   

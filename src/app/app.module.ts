@@ -27,6 +27,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { ChartComponent } from './componentes/chart/chart.component';
 import { NavbarLoggeadoComponent } from './componentes/navbar-loggeado/navbar-loggeado.component';
 import { SidenavComponent } from './componentes/sidenav/sidenav.component';
+import { StudioComponent } from './componentes/studio/studio.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { SidenavComponent } from './componentes/sidenav/sidenav.component';
     ChartComponent,
     NavbarLoggeadoComponent,
     SidenavComponent,
+    StudioComponent,
 
   ],
   imports: [

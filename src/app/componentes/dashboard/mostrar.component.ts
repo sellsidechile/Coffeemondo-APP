@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 export class MostrarComponent implements OnInit {
   Usuarios: Usuarios[]
   menuStatus: boolean= false;
-  @Input() sideNavStatus: boolean = false;
+  @Input() sideNavStatus: boolean = true;
   @Output() sideNavToggled = new EventEmitter<boolean>();
 
 constructor(

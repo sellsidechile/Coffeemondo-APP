@@ -7,6 +7,7 @@ import { ForgotComponent } from './componentes/Usuarios/forgot/forgot.component'
 import { LoginComponent} from './componentes/Usuarios/Login/login.component';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { ChartComponent } from './componentes/chart/chart.component';
+import { StudioComponent} from './componentes/studio/studio.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo:'/index'},
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'registro', component:RegisterComponent},
   {path: 'forgot', component:ForgotComponent},
   {path: 'index', component:IndexComponent},
-  {path: 'chart', component:ChartComponent}
+  {path: 'chart', component:ChartComponent},
+  {path: 'studio', component:StudioComponent}
   
 ];
 
