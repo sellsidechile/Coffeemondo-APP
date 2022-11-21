@@ -1,20 +1,75 @@
-.nav-wrapper{
-    background-color: #D25B37 ;
-  }
-  
-  .googlegraphic{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-  }
-  
-  .rounded-pill{
-    text-align: right;
-    float: right;
-  }
-  
-  body{
-    background: #61269c;
-  }
-  
+.nav-wrapper {
+  background-color: #D25B37;
+}
+
+.googlegraphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.rounded-pill {
+  text-align: right;
+  float: right;
+}
+
+body {
+  background: #61269c;
+}
+
+.nav-wrapper {
+  background-color: #D25B37;
+}
+
+
+.rounded-pill {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+}
+
+
+body {
+  background: #61269c;
+}
+
+app-sidenav {
+  position: fixed;
+  left: 0rem;
+  width: 0px;
+  height: calc(101vh - 1.5rem);
+  background-color: #D25B37;
+  overflow-x: hidden;
+  transition: 0.5s;
+
+}
+
+.app-sidenav-open {
+  width: 150px;
+}
+
+main {
+  position: absolute;
+  width: 100%;
+  top: 4rem;
+  z-index: 1;
+}
+
+nav {
+  height: 70px;
+}
+
+.navbar {
+  background-color: #D25B37;
+}
+
+.navbar-collapse {
+  background-color: #D25B37;
+  color: #D25B37;
+}
+
+.burger {
+  margin: 10px;
+}

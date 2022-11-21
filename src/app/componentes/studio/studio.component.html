@@ -1,3 +1,23 @@
+<nav class="navbar navbar-expand px-2">
+    <div (click)="sideNavToggle()">
+    <a class="burger"><img src="../../../assets/menu.png" height="30px" width="30px"></a>
+    </div>
+    <a href="#" class="brand-logo right">
+        <img src="../../../assets/logo.png" alt="Avatar Logo" style="width:60px;" class="rounded-pill">
+    </a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <a (click)="onClick()">Cerrar Sesión</a>
+    </ul>
+</nav>
+
+<main>
+    <app-sidenav [sideNavStatus]="menuStatus" [ngClass]="{'app-sidenav-open' : menuStatus }">
+        <div class="display-area p-3">
+            <p class="fs-1 fw-bold fst-italic"></p>
+        </div>
+    </app-sidenav>
+</main>
+
 
 <div class="googlegraphic">
     <iframe width="1170" height="878" src="https://datastudio.google.com/embed/reporting/bc4f0269-9b96-4504-a3b4-d4150cc23255/page/7lf3C" frameborder="0" style="border:0" ></iframe>
