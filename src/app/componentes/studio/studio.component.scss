@@ -35,7 +35,19 @@ body {
   background: #61269c;
 }
 
-app-sidenav {
+.nav-wrapper{
+  background-color: #D25B37 ;
+}
+
+
+.rounded-pill{
+  width: 100%;
+  display: flex;
+  align-items:flex-end;
+  justify-content: right;
+}
+
+app-sidenav{
   position: fixed;
   left: 0rem;
   width: 0px;
@@ -45,31 +57,28 @@ app-sidenav {
   transition: 0.5s;
 
 }
-
-.app-sidenav-open {
-  width: 150px;
+.app-sidenav-open{
+  width: 180px;
 }
 
-main {
+main{
   position: absolute;
   width: 100%;
   top: 4rem;
   z-index: 1;
 }
 
-nav {
-  height: 70px;
+nav{
+  height:70px;
 }
 
 .navbar {
   background-color: #D25B37;
 }
-
-.navbar-collapse {
+.navbar-collapse{
   background-color: #D25B37;
   color: #D25B37;
 }
-
-.burger {
-  margin: 10px;
+.burger{
+  margin:10px;
 }

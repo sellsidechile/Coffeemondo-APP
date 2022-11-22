@@ -28,6 +28,15 @@ import { ChartComponent } from './componentes/chart/chart.component';
 import { NavbarLoggeadoComponent } from './componentes/navbar-loggeado/navbar-loggeado.component';
 import { SidenavComponent } from './componentes/sidenav/sidenav.component';
 import { StudioComponent } from './componentes/studio/studio.component';
+import { ShopComponent } from './componentes/data-studio/shop/shop.component';
+import { PlotsComponent } from './componentes/data-studio/plots/plots.component';
+import { SocialComponent } from './componentes/data-studio/social/social.component';
+import { NlpComponent } from './componentes/data-studio/nlp/nlp.component';
+import { MantenimientoComponent } from './componentes/data-studio/mantenimiento/mantenimiento.component';
+import { CxComponent } from './componentes/data-studio/cx/cx.component';
+import { VisionComponent } from './componentes/data-studio/vision/vision.component';
+import { AplicacionComponent} from './componentes/data-studio/aplicacion/aplicacion.component';
+
 
 
 @NgModule({
@@ -43,6 +52,14 @@ import { StudioComponent } from './componentes/studio/studio.component';
     NavbarLoggeadoComponent,
     SidenavComponent,
     StudioComponent,
+    ShopComponent,
+    PlotsComponent,
+    SocialComponent,
+    NlpComponent,
+    MantenimientoComponent,
+    CxComponent,
+    VisionComponent,
+    AplicacionComponent,
 
   ],
   imports: [
