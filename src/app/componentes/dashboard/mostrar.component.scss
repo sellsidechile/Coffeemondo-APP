@@ -9,9 +9,7 @@
   align-items:flex-end;
   justify-content: right;
 }
-body{
-  background: #61269c;
-}
+
 app-sidenav{
   position: fixed;
   left: 0rem;
@@ -49,10 +47,9 @@ nav{
 }
 
 
-*{
-  margin: 0px;
-  padding: 0px;
-  
+
+.background {
+
 }
 
 .container{
@@ -110,4 +107,40 @@ nav{
 
 .contenedor .comentario{
   grid-column: span 2;
+}
+
+
+
+p{
+  line-height: 1.4;
+}
+
+.container a{
+  font-size: 2.5rem;
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+.container a:link{
+  color: #61269c;
+}
+
+.container a:visited{
+  color: #491083;
+}
+
+.container a:focus{
+  border-bottom: 1px solid;
+  background: #773db1;
+}
+
+.container a:hover{
+  border-bottom: 1px solid;
+  background: #a582c9;
+}
+
+.container a:active{
+  background: #6e429b;
+  color: #340b5e;
 }

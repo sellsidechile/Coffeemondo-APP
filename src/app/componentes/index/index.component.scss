@@ -489,12 +489,79 @@ border-radius: 10px;
 //     width: 400px;
 // }
 
-.archivements {
-    width: 100%;
-    height: auto;
-}
+// .archivements {
+//     width: 100%;
+//     height: auto;
+// }
 
-.contArchivements {
+// .contArchivements {
+//     width: 100%;
+//     height: fit-content;
+//     background-image: url(../../../assets/coffe.png);
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 100px 0px;
+// }
+
+// .colArchivements {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     background-color: #f0ddb5c8;
+//     width: 1200px;
+//     padding: 100px 50px 20px 50px;
+//     margin-top: 380px;
+// }
+
+// .rowArchivements {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     flex-direction: row;
+//     width: 100%;
+// }
+
+// .relArchv {
+//     position: relative;
+
+// }
+
+// .textArchv {
+//     position: absolute;
+//     bottom: 13px;
+//     left: 40%;
+//     font-family: "PTSans-Bold";
+//     color: #fff;
+//     font-size: 15px;
+// }
+
+// .practice {
+//     margin-bottom: 50px;
+//     font-family: "PTSans-Bold";
+//     color: #61269c;
+//     font-size: 30px;
+// }
+
+// .knowArchv {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: row;
+//     margin-top: 20px;
+
+// }
+
+// .knowArchv span {
+//     font-family: "PTSans-Bold";
+//     color: #61269c;
+//     font-size: 15px;
+//     min-height: 70%;
+// }
+
+
+.conlogro{
     width: 100%;
     height: fit-content;
     background-image: url(../../../assets/coffe.png);
@@ -504,59 +571,82 @@ border-radius: 10px;
     padding: 100px 0px;
 }
 
-.colArchivements {
-    display: flex;
+
+
+.containerlogro {
+
+    margin: 20px auto;
+    display: grid;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-items: center;
+    grid-gap: 20px;
     background-color: #f0ddb5c8;
     width: 1200px;
     padding: 100px 50px 20px 50px;
-    margin-top: 380px;
+    margin-top: 300px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
 }
 
-.rowArchivements {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 100%;
+.containerlogro .titulologro{
+    grid-column: span 4;
+    grid-row: span 1;
 }
 
-.relArchv {
-    position: relative;
+.containerlogro .desclogro{
+    grid-column: span 2;
 }
 
-.textArchv {
-    position: absolute;
-    bottom: 13px;
-    left: 40%;
-    font-family: "PTSans-Bold";
-    color: #fff;
-    font-size: 15px;
+.containerlogro .botonlogro{
+    grid-column: span 2;
 }
+
 
 .practice {
     margin-bottom: 50px;
     font-family: "PTSans-Bold";
     color: #61269c;
-    font-size: 30px;
+    font-size: calc(1em + 2vw);
 }
 
-.knowArchv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 20px;
-
+.logro1{
+    position: relative;
+}
+.logro2{
+    position: relative;
+}
+.logro3{
+    position: relative;
+}
+.logro4{
+    position: relative;
 }
 
-.knowArchv span {
+.archivements{
+    width: 100%;
+    height: auto;
+}
+
+.textArchv{
+    position: absolute;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "PTSans-Bold";
+    color: rgb(10, 10, 10);
+    font-size: calc(0.5em + 0.5vw);
+}
+
+.desclogro span{
     font-family: "PTSans-Bold";
     color: #61269c;
-    font-size: 15px;
-    min-height: 70%;
+    font-size: calc(0.5em + 1vw);
+}
+
+.knowing{
+    width: 100%;
+    height: auto;
 }
 
 
