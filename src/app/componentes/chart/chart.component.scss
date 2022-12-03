@@ -60,37 +60,9 @@ margin:10px;
 }
 
 
-p{
-    font-size: 2.2rem;
-  }
-
-
-  .container a{
-    font-size: 2.5rem;
-    outline: none;
-    text-decoration: none;
-    padding: 2px 1px 0;
-  }
-  
-  .container a:link{
-    color: #61269c;
-  }
-  
-  .container a:visited{
-    color: #491083;
-  }
-  
-  .container a:focus{
-    border-bottom: 1px solid;
-    background: #773db1;
-  }
-  
-  .container a:hover{
-    border-bottom: 1px solid;
-    background: #a582c9;
-  }
-  
-  .container a:active{
-    background: #6e429b;
-    color: #340b5e;
-  }
+.googlegraphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
