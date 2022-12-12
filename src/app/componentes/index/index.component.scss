@@ -4,8 +4,20 @@
     top: 0;
     width: 100%;
     background: linear-gradient(0deg, #ffffff00 0%, rgba(247, 77, 42) 100%);
-    backdrop-filter: blur(0px);
+    
     height: 200px;
+    
+
+}
+
+.navbar-collapse{
+    background: hsl(0 0% 100%/ 0.1);
+    backdrop-filter: blur(2rem);
+    position: relative;
+}
+
+.carousel-indicators{
+    z-index: -2;
 }
 
 .navbar-brand {
@@ -14,7 +26,7 @@
     justify-content: center;
 }
 
-.collapse {}
+
 
 .logonav {
     width: 100px;
@@ -61,9 +73,11 @@
     height: 100%;
     margin: 20px auto;
     display: grid;
+    position: relative;
     grid-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, auto);
+    z-index: -2;
 }
 
 .container .video {
@@ -189,9 +203,11 @@
 
 .textocoffe {
     color: #F0DDB5;
+    display: flex;
     font-size: 30px;
     margin-top: 20px;
     padding: 0px 50px;
+    text-align: center;
 }
 
 .disponibletext {
@@ -236,106 +252,11 @@ border-radius: 10px;
 
 
 
-// .logos{
-//     display: flex;
-//     align-items: center;
-//     justify-content:space-around;
-//     flex-direction: row;
-//     list-style: none;
-//     margin-right: 100px;
-//     width: 210px;
-
-
 .imagen {
     height: 100% !important;
     width: 100% !important;
 }
 
-// .informacion{
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-//     justify-content:center;
-//     flex-direction: column;
-
-// }
-// .imagena{
-//     position: relative;
-//     height: 100%!important;
-//     width: 100%!important;
-
-// }
-// .imagenContainer{
-//     display: flex;
-//     flex-direction: row;
-// }
-// .textotop{
-//     position: absolute;
-//     top: 8px;
-//     left: 16px;
-//     color: #fff;
-//     font-family: "CookieRun Bold";
-//     font-size: 25px;
-// }
-// .textobottom{
-//     position: absolute;
-//     bottom: 8px;
-//     right: 16px;
-//     color: #fff;
-
-// }
-// .imageninfo{
-//     height: 250px;
-//     width: 700px;
-// }
-// .videont{
-//     margin-top: 50px;
-// }
-// .logotext{
-//     font-family: "CookieRun Bold";
-//     color: #F0DDB5;
-//     font-size: 35px;
-// }
-// .containerlogo{
-//     display: flex;
-//     align-items: center;
-//     justify-content:center;
-//     flex-direction: column;
-//     width: 100%;
-// }
-// .logo{
-//     width: 170px;
-//     height: 170px;
-//     margin-top: 80px;
-// }
-// .textocoffe{
-//     color: #F0DDB5;
-//     font-size: 30px;
-//     margin-top: 20px;
-//     padding: 0px 50px;
-// }
-// .disponibletext{
-//     color: #fff;
-//     font-size: 20px;
-//     margin-top: 60px;
-// }
-// .dispologos{
-//     display: flex;
-//     align-items: center;
-//     justify-content:center;
-//     flex-direction: row;
-//     width: 100%;
-//     margin-bottom: 70px;
-// }
-// .logodownload{
-//     width: 320px;
-//     height: 100px;
-//     margin-top: 40px;
-// }
-// .appstore{
-//     margin-right: 50px;
-//     border-radius: 14px;
-// }
 
 /*CSS GRID */
 .containerservice {
@@ -353,12 +274,14 @@ border-radius: 10px;
 .containerservice .titulo {
     grid-column: span 2;
     grid-row: span 1;
+    
 
 }
 
 .containerservice .servicio1 {
     grid-column: span 1;
     grid-row: span 1;
+
 }
 
 .containerservice .servicio2 {
@@ -637,7 +560,7 @@ border-radius: 10px;
     transform: translate(-50%, -50%);
     font-family: "PTSans-Bold";
     color: rgb(10, 10, 10);
-    font-size: calc(0.5em + 0.5vw);
+    font-size: calc(0.3em + 0.5vw);
 }
 
 .desclogro span{

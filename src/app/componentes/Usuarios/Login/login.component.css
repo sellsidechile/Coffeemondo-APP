@@ -46,7 +46,7 @@ input[type="password"] {
   background: transparent;
   border: none;
   border-bottom: 2px solid #FB5825;
-  width: 400px;
+  width: 100%;
   margin: 10px;
   height: 50px;
   padding-left: 50px;
@@ -94,8 +94,9 @@ input[type="password"]:focus-visible{
   border: none;
   background-color: #ffffff00;
   margin-top: 10px;
-  width: 310px;
-  margin-left: 200px;
+  margin-bottom: 10px;
+  width: 100%;
+  align-items: center;
 
 }
 
