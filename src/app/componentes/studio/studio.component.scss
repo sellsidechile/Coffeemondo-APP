@@ -19,7 +19,8 @@ body {
 }
 
 .nav-wrapper {
-  background-color: #D25B37;
+  background: hsl(0 0% 100%/ 0.1);
+  backdrop-filter: blur(2rem);
 }
 
 
@@ -36,7 +37,8 @@ body {
 }
 
 .nav-wrapper{
-  background-color: #D25B37 ;
+  background: hsl(0 0% 100%/ 0.1);
+  backdrop-filter: blur(2rem);
 }
 
 
@@ -52,7 +54,8 @@ app-sidenav{
   left: 0rem;
   width: 0px;
   height: calc(101vh - 1.5rem);
-  background-color: #D25B37;
+  background: hsl(0 0% 100%/ 0.1);
+  backdrop-filter: blur(2rem);
   overflow-x: hidden;
   transition: 0.5s;
 
@@ -73,11 +76,12 @@ nav{
 }
 
 .navbar {
-  background-color: #D25B37;
+  background: hsl(0 0% 100%/ 0.1);
+  backdrop-filter: blur(2rem);
 }
 .navbar-collapse{
-  background-color: #D25B37;
-  color: #D25B37;
+  background: hsl(0 0% 100%/ 0.1);
+  backdrop-filter: blur(2rem);
 }
 .burger{
   margin:10px;
