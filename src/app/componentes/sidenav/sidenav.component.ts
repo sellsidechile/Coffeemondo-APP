@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
   @Input() sideNavStatus: boolean;
+  
+
 
   list =[
     {
@@ -82,9 +84,13 @@ export class SidenavComponent implements OnInit {
     },
   ]
   
-  constructor() { }
+  constructor() { 
+
+  }
 
   ngOnInit(): void {
   }
+
+
 
 }

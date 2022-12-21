@@ -1,14 +1,27 @@
 {
   "hosting": {
+<<<<<<< Updated upstream
     "rewrites":[{
       "source": "**",
       "destination": "/index.html"
     }],
     "public": "dist/angularcoffeemondo",
+=======
+    "public": "/dist/angularcoffeemondo",
+>>>>>>> Stashed changes
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+<<<<<<< Updated upstream
+=======
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+>>>>>>> Stashed changes
     ]
   }
 }
