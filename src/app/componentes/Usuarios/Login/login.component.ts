@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   formLogin: FormGroup;
   formModalLog: any;
   modalLogin: any;
+  IsLoggin: boolean= false;
 
   constructor(
     private userService: UsuariosService,
@@ -50,8 +51,10 @@ export class LoginComponent implements OnInit {
       .then(() => {
         Swal.fire({
           text: "Se ha auntenticado de manera correcta",
-          icon: "success"
+          icon: "success",
+          
         })
+
         this.goToDashboard();
       })
       .catch(err => {

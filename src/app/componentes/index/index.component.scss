@@ -57,6 +57,16 @@
 
 }
 
+@media (max-width: 991px) {
+    .navbar-nav{
+        display: flex;
+        align-items: center;
+        margin-bottom: 100px;
+        
+    }
+
+}
+
 
 .nav-link {
     font-size: 20px;

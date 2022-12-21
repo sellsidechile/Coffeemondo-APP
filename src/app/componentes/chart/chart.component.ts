@@ -10,7 +10,7 @@ import { UsuariosService } from '../../services/usuarios.service';
   styleUrls: ['./chart.component.scss']
 })
 export class ChartComponent implements OnInit {
-  menuStatus: boolean= false;
+  menuStatus: boolean= true;
   @Input() sideNavStatus: boolean = false;
   @Output() sideNavToggled = new EventEmitter<boolean>();
   constructor( 

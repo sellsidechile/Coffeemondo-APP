@@ -11,8 +11,8 @@ import Swal from 'sweetalert2';
 })
 export class SocialComponent implements OnInit {
   Usuarios: Usuarios[]
-  menuStatus: boolean= false;
-  @Input() sideNavStatus: boolean = true;
+  menuStatus: boolean= true;
+  @Input() sideNavStatus: boolean = false;
   @Output() sideNavToggled = new EventEmitter<boolean>();
 
 
