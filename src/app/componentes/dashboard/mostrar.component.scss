@@ -11,20 +11,7 @@
   justify-content: right;
 }
 
-app-sidenav{
-  position: fixed;
-  left: 0rem;
-  width: 0px;
-  height: calc(101vh - 1.5rem);
-  background: hsl(0 0% 100%/ 0.1);
-  backdrop-filter: blur(2rem);
-  overflow-x: hidden;
-  transition: 0.5s;
 
-}
-.app-sidenav-open{
-  width: 180px;
-}
 
 main{
   position: absolute;
