@@ -1,25 +1,15 @@
-<!-- <div class="background">
-    <nav class="navbar navbar-expand px-2">
-        <div (click)="sideNavToggle()">
-            <a class="burger"><img src="../../../assets/menu.png" height="30px" width="30px"></a>
-        </div>
-        <a href="#" class="brand-logo right">
-            <img src="../../../assets/logo.png" alt="Avatar Logo" style="width:60px;" class="rounded-pill">
-        </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <a (click)="onClick()">Cerrar Sesión</a>
-        </ul>
-    </nav> -->
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+</head>
 
-
-    <!-- <main>
-        <app-sidenav [sideNavStatus]="menuStatus" [ngClass]="{'app-sidenav-open' : menuStatus }">
-            <div class="display-area p-3">
-                <p class="fs-1 fw-bold fst-italic"></p>
-            </div>
-        </app-sidenav>
-    </main> -->
+<body>
 
 
     <div class="container">
@@ -67,3 +57,10 @@
             </p>
         </div>
     </div>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+    <df-messenger df-cx="true" location="us-east1" chat-title="Coffeemondo"
+        agent-id="7c4a48a8-f68a-4772-89c9-6e20e275cf1a" language-code="es"></df-messenger>
+</body>
+
+</html>
