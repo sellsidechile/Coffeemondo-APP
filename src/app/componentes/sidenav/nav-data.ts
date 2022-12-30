@@ -20,23 +20,19 @@ export const navbarData = [
         label: 'Shop'
     },
     {
-        routerLink: 'shop',
-        icon: 'fa-solid fa-compass-drafting',
-        label: 'Shop'
-    },
-    {
         routerLink: 'plots',
-        icon: 'fa-regular fa-thumbs-up',
+        icon: 'fa-solid fa-compass-drafting',
         label: 'Plots'
     },
+
     {
         routerLink: 'social',
-        icon: 'fa-solid fa-ranking-star',
+        icon: 'fa-solid fa-user-group',
         label: 'Social'
     },
     {
         routerLink: 'nlp',
-        icon: 'fa-solid fa-ranking-star',
+        icon: 'fa-solid fa-language',
         label: 'NLP'
     },
     {
@@ -46,7 +42,7 @@ export const navbarData = [
     },
     {
         routerLink: 'cx',
-        icon: 'fa-solid fa-ranking-star',
+        icon: 'fa-solid fa-database',
         label: 'CX'
     },
     {

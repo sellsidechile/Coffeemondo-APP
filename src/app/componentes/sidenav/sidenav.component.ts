@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit,Renderer2 } from '@angular/core';
 import { navbarData } from './nav-data';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 import Swal from 'sweetalert2';
@@ -15,7 +15,7 @@ export class SidenavComponent implements OnInit {
   collapsed = false;
   navData= navbarData ;
   constructor(private usuariosService : UsuariosService,
-    private router : Router) { 
+    private router : Router, private renderer: Renderer2) { 
 
   }
 

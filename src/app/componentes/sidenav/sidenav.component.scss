@@ -1,23 +1,36 @@
 .sidenav{
-    background: #263138;
+    background: rgba(122, 97, 97, 0.171);
+    backdrop-filter: blur(2rem);
     transition: all .5s ease;
     position: fixed;
     z-index: 1;
     top: 0;
     width: 5rem;
     height: 100vh;
-    box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+    box-shadow: 0.063rem 0 1.25rem 0 #4d4e4e;
 
     .logo-container{
         display: flex;
         align-items: center;
         padding: 0.938rem 0.938rem 0.938rem;
         width: 100%;
+        background: transparent;
 
+        .btn{
+            background: transparent;
+            border-left: 20px;
+            width: 3rem;
+            min-width: 3rem;
+            position: relative;
+            right: 10px;
+            outline: none;
+            border: none;
 
+        }
         .logo{
-            background: #fff;
+            
             text-align: center;
+            
             width: 3rem;
             min-width: 3rem;
             border-radius: 0.313rem;
@@ -26,13 +39,16 @@
             font-weight: 900;
             cursor: pointer;
             border: none;
+            
+            
         }
 
         .logo-text{
-            margin-left: 1.5rem;
+            margin-left: 0.5rem;
             font-size: 24px;
             font-weight: 700;
             color: #fff;
+            margin-right: 12px;
         }
 
 
@@ -64,7 +80,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    bottom: -1;
     cursor: pointer;
 
     .sidenav-nav-item{
@@ -110,7 +126,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(100% - 3.56rem);
     cursor: pointer;
     margin-top: 43%;
+    background-color: lightgray;
+    border-radius: 20px;
+}
+
+@media (max-width: 1130px) {
+    .sidenav-nav-item-logout{
+        margin-top: 17%;
+    }
 }
