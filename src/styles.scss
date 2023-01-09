@@ -1,11 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
-@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "../node_modules/bootstrap/scss/bootstrap";
 
-.container {
-  width: 100vw;
-  height: 100vh;
-  background-color: #D25B37;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body{
+    background-color: #330E58 !important;
 }
+@font-face {
+    font-family: THEBOLDFONT 2022;
+    src: url('../src/assets/THEBOLDFONT\ 2022.otf');
+}
+@font-face {
+    font-family: TS Block Bold;
+    src: url('../src/assets/TS\ Block\ Bold.ttf');
+}
+h1 {
+    color: #DAD1AA;
+    font-family: 'TS Block Bold';
+    font-size: 30px;
+    margin-bottom: 40px;
+  }

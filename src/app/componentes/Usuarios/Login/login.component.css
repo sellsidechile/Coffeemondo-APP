@@ -1,18 +1,28 @@
-
 *:focus {
   outline: none;
 }
 
 #login-box {
+  margin-top: 40px;
+  margin-bottom: 51px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 500px;
-  height: 700px;
-  background: #330E58;
+  width: 35rem;
+  height: 40rem;
+  background: #D25B37;
   border-radius: 2px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20pxx;
 }
 
 .loginInfo {
@@ -31,37 +41,38 @@
   margin-bottom: 40px;
 }
 
-  input[type="text"],
-  input[type="password"] {
-    display: block;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    padding: 4px;
-    width: 350px;
-    height: 35px;
-    border: none;
-    border-bottom: 1px solid #AAA;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    transition: 0.2s ease;
+input[type="text"],
+input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  padding: 4px;
+  width: 350px;
+  height: 35px;
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  color: #330E58;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
 
-  }
+}
 
-  input[type="text"]:focus,
-  input[type="password"]:focus {
-    border-bottom: 2px solid #D25B37;
-    color: black;
-    transition: 0.2s ease;
-  }
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #ffffff;
+  color: #330E58;
+  transition: 0.2s ease;
+}
 
 input[type="submit"] {
   margin-top: 30px;
   margin-left: 20px;
   width: 200px;
   height: 50px;
-  background: #D25B37;
+  background: #330E58;
   border: none;
   border-radius: 2px;
   color: #FFF;
@@ -85,12 +96,13 @@ input[type="submit"]:active {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   transition: 0.1s ease;
 }
+
 input[type="button"] {
   margin-top: 28px;
   margin-left: 15px;
   width: 200px;
   height: 50px;
-  background: #D25B37;
+  background: #330E58;
   border: none;
   border-radius: 2px;
   color: #FFF;
@@ -100,6 +112,10 @@ input[type="button"] {
   text-transform: uppercase;
   transition: 0.1s ease;
   cursor: pointer;
+}
+
+input::placeholder {
+  color: rgb(255, 255, 255);
 }
 
 input[type="button"]:hover,
@@ -197,28 +213,47 @@ button.social-signin.facebook {
   color: rgb(255, 255, 255);
   justify-content: center;
   align-items: center;
-  display:inline-flex;
+  display: inline-flex;
   margin-left: 15px;
+  margin-top: 30px;
 }
-button.social-signin.facebook img{
+
+button.social-signin.facebook img {
   width: 20px;
   height: 20px;
   margin-right: 10px;
+  
 }
 
 button.social-signin.google {
   background: #d9d9d9;
-  color: rgba(0,0,0,0.6);
+  color: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
-  display:inline-flex;
+  display: inline-flex;
 }
 
-button.social-signin.google img{
+button.social-signin.google img {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
-.forgot{
-  padding-left: 50px;
+
+.forgot {
+  width: 100%;
+  text-align: end; 
+}
+
+@media(min-width: 458px) {
+  .container{
+      width: 100%;
+      max-width: 1500px;
+
+  }
+
+  .botones{
+    max-width: 100%;
+
+    justify-content: right;
+  }
 }
