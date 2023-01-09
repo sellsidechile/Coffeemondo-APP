@@ -1,0 +1,47 @@
+footer {
+    background-color: #2B0052;
+}
+.rowfooter{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: row;
+    width: 100%;
+    padding: 50px 200px;
+}
+.logoamario{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+}
+.logoamario img{
+    width: 100px;
+    height: 100px;
+}
+
+.logoamario span{
+    font-size: 30px;
+    font-family: "PTSans-Bold";
+    color: #F0DDB5;
+}
+.textfooter {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+.copy{
+    font-size: 30px;
+    font-family: "CookieRun Bold";
+    color: #F0DDB5;
+}
+.derechos{
+    font-size: 15px;
+    font-family: "PTSans-Bold";
+    color: #F0DDB5;
+}
+.redesfooter img{
+    width: 50px;
+    height: 50px;
+}

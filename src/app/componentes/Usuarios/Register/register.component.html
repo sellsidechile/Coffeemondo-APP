@@ -1,0 +1,37 @@
+
+<div class="container">
+  <div id="login-box">
+    <div class="left">
+      <h1>Registrate</h1>
+      <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
+        <label for="Email" class="text-light mb-3 ms-5 fs-5">Email</label>
+        <input type="text" id="email" class="form-control" placeholder="E-mail" formControlName="email" />
+        <label for="Password" class="text-light mb-3 ms-5 fs-5">Contraseña</label>
+        <input type="password" id="password" class="form-control" placeholder="Contraseña" formControlName="password" />
+
+
+        <div class="botones">
+          <input type="submit" id="signUp" name="signup_submit" value="Registrarte" />
+          <input type="button" value="Login" routerLink="/login" />
+        </div>
+
+        <div class="or">
+          <hr class="line" />
+          <span>o</span>
+          <hr class="line" />
+        </div>
+
+        <br>
+      </form>
+      <button class="social-signin google" (click)="onClick()"> <img
+          src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
+          height="20px"> Ingresa con Google 
+      </button>
+      <!-- <button class="social-signin facebook" (click)="onFace()"> <img
+          src="https://cdn-icons-png.flaticon.com/512/174/174848.png" height="20px"> Ingresa con Facebook
+      </button> -->
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
