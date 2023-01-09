@@ -1,11 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
-@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
 
-.container {
-  width: 100vw;
-  height: 100vh;
-  background-color: #D25B37;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body{
+    background-color: #FB5825 !important;
 }
+
+@font-face {
+    font-family: CookieRun Bold;
+    src: url('../src/assets/CookieRun\ Bold.otf');
+}
+@font-face {
+    font-family: PTSans-Bold;
+    src: url('../src/assets/PTSans-Bold.ttf');
+}
+
+

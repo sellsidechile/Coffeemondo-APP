@@ -1,0 +1,22 @@
+<div class="container">
+  <div id="login-box">
+    <div class="left">
+      <h1>¿Olvidaste tu contraseña?</h1>
+      <form [formGroup]="formForgot">
+        <mat-form-field appearance="fill">
+          <mat-label> E-mail </mat-label>
+          <input matInput formControlName="email" type="text">
+        </mat-form-field>
+
+        <div  class="row mt-2">
+          <div class="col">
+            <button mat-button (click)="onForgot()"> Enviar </button>
+          </div>
+          <div style="width: 100%;" class="col">
+            <button mat-button routerLink="/login"> Volver </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

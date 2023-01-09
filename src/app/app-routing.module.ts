@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MostrarComponent } from './componentes/dashboard/mostrar.component';
-import { RegisterComponent} from './componentes/Register/register.component';
+import { RegisterComponent} from './componentes/Usuarios/Register/register.component';
 import { IndexComponent } from './componentes/index/index.component';
-import { ForgotComponent } from './componentes/forgot/forgot.component';
-import { LoginComponent} from './componentes/Login/login.component';
+import { ForgotComponent } from './componentes/Usuarios/forgot/forgot.component';
+import { LoginComponent} from './componentes/Usuarios/Login/login.component';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { ChartComponent } from './componentes/chart/chart.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo:'/index'},
@@ -18,6 +19,8 @@ const routes: Routes = [
   {path: 'registro', component:RegisterComponent},
   {path: 'forgot', component:ForgotComponent},
   {path: 'index', component:IndexComponent},
+  {path: 'chart', component:ChartComponent}
+  
 ];
 
 @NgModule({

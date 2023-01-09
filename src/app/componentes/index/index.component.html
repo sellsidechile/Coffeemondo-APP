@@ -1,36 +1,149 @@
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index</title>
-</head>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../../assets/MUJER.jpg" alt="mujer" class="imagen">
+    </div>
+    <div class="carousel-item">
+      <img src="../../../assets/hombre2.png" class="imagen" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<nav class="navbar navbar-expand-lg fondo">
+  <div class="container-fluid d-flex justify-content-between">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <a class="navbar-brand" href="#">
+        <img src="../../../assets/logo.png" alt="Logo" class="d-inline-block align-text-top logonav">
+        <span class="titleHead">COFFEE <br /> MONDO</span>
+      </a>
+      <ul class="navbar-nav">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="login">Iniciar Sesión</a> 
+          
+        </li>
 
-  <body>
-      <nav class="navbar">
-          <div class="nav-wrapper">
-              <a href="#" class="brand-logo right">
-                  <img src="../img/logo.png" alt="Avatar Logo" style="width:60px;" class="rounded-pill">
-              </a>
-              <ul id="nav-mobile" class="left hide-on-med-and-down">
-
-              </ul>
-          </div>
-      </nav>
-
-      <div class="Home-box">
-          <div class="home-box-dentro">
-              <h1 style="color: rgba(255, 255, 255, 0.514);">Bienvenido</h1>
-              <p style="color: rgba(255, 255, 255, 0.514);">Página de prueba de inicio</p>
-
-              <input type="button" value="Registrarse" routerLink="/registro">
-              <input type="button" value="Loguearse" routerLink="/login">
-          </div>
-          <div class="logout-boton">
-
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" href="registro">Registro</a>
+        </li>
+ -->
+        <li class="nav-item">
+          <a class="nav-link" href="login">
+            Ingresar y Registrarse
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            MENÚ 1
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            MENÚ 2
+          </a>
+        </li>
+      </ul>
+      <ul class="logos">
+        <li>
+          <img src="../../../assets/facebook.png" alt="facebook" class="facebook" width="40" height="40">
+        </li>
+        <li>
+          <img src="../../../assets/instagram.png" alt="instagram" class="instagram" width="40" height="40">
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="informacion">
+  <div class="imagenContainer">
+    <div class="imagena">
+      <img src="../../../assets/TELEFONO.jpg" class="imageninfo">
+      <span class="textotop">¿QUÉ ES COFFEEMONDO?</span>
+      <span class="textobottom">Ver más <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"
+          fill-rule="evenodd" clip-rule="evenodd">
+          <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+        </svg></span>
+    </div>
+    <div class="imagena">
+      <img src="../../../assets/CAFE 2.jpg" class="imageninfo">
+      <span class="textotop">¿CÓMO FUNCIONA COFFEEMONDO?</span>
+      <span class="textobottom">Ver más <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"
+          fill-rule="evenodd" clip-rule="evenodd">
+          <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+        </svg></span>
+    </div>
+  </div>
+  <img src="../../../assets/videont.png" class="videont">
+  <div class="containerlogo">
+    <img src="../../../assets/logo.png" class="logo">
+    <span class="logotext">COFFEE<br /> MONDO</span>
+    <span class="textocoffe">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+      aliquip ex ea commodo consequat.</span>
+    <span class="disponibletext">Disponible en:</span>
+  </div>
+  <div class="dispologos">
+    <img src="../../../assets/appstoree.png" class="logodownload appstore">
+    <img src="../../../assets/googleplay.png" class="logodownload">
+  </div>
+  <div class="containerservice">
+    <span class="textservices">¿QUÉ QUIERES HACER HOY?</span>
+    <div class="rowserv">
+      <div class="contserving">
+        <img src="../../../assets/recetas.png" class="imgserv">
+        <img src="../../../assets/cupones.png" class="imgserv">
+        <img src="../../../assets/logros.png" class="imgserv">
+        <img src="../../../assets/reseñas.png" class="imgserv">
       </div>
-  </body>
+    </div>
+  </div>
+  <div class="contArchivements">
+    <div class="colArchivements">
+      <span class="practice">PRACTICA CON TUS LOGROS</span>
+      <div class="rowArchivements">
+        <div class="relArchv">
+          <img src="../../../assets/leche.svg" class="archivements">
+          <span class="textArchv">Logro 1 </span>
+        </div>
+        <div class="relArchv">
+          <img src="../../../assets/granos.svg" class="archivements">
+          <span class="textArchv">Logro 2 </span>
+        </div>
+        <div class="relArchv">
+          <img src="../../../assets/taza.svg" class="archivements">
+          <span class="textArchv">Logro 3 </span>
+        </div>
+        <div class="relArchv">
+          <img src="../../../assets/tetera.svg" class="archivements">
+          <span class="textArchv">Logro 4 </span>
+        </div>
+      </div>
+      <div class="knowArchv">
+        <span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias modi officiis dolore, nobis deserunt ex quaerat
+          voluptatibus sint soluta mollitia a sunt magni, corporis unde doloremque temporibus, natus consequatur
+          tempore?
+        </span>
+         <img src="../../../assets/conoce.svg" class="knowing"> 
+      </div>
+    </div>
+  </div>
+</div>
 
-
+<app-footer></app-footer>
