@@ -36,6 +36,8 @@ import { MantenimientoComponent } from './componentes/data-studio/mantenimiento/
 import { CxComponent } from './componentes/data-studio/cx/cx.component';
 import { VisionComponent } from './componentes/data-studio/vision/vision.component';
 import { AplicacionComponent} from './componentes/data-studio/aplicacion/aplicacion.component';
+import { HlsComponent } from './hls/hls.component';
+declare const videojs: any;
 
 
 
@@ -60,6 +62,7 @@ import { AplicacionComponent} from './componentes/data-studio/aplicacion/aplicac
     CxComponent,
     VisionComponent,
     AplicacionComponent,
+    HlsComponent,
 
   ],
   imports: [

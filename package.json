@@ -10,6 +10,10 @@
   },
   "private": true,
   "dependencies": {
+    "core-js": "2.5.5",
+    "video.js": "7.2.0",
+    "videojs-dvrseekbar": "0.2.7",
+    "videojs-contrib-hls": "5.14.1",
     "@angular/animations": "^14.1.0",
     "@angular/cdk": "^14.2.5",
     "@angular/common": "^14.1.0",
