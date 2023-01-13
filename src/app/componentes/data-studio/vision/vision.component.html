@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <meta name="viewport" content="width-device-width, initial-scale=1">
-</head>
-
-<body>
-
-    <div class="container">
-        <iframe src="https://www.youtube.com/embed/UDxUKom41L4" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-    </div>
-
-
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
-    <df-messenger df-cx="true" location="us-east1" chat-title="Coffeemondo"
-        agent-id="7c4a48a8-f68a-4772-89c9-6e20e275cf1a" language-code="es"></df-messenger>
-</body>
-
-</html>
+<link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+<script src="https://unpkg.com/video.js/dist/video.js"></script>
+<video id="my-video" class="video-js"></video>
+<script>
+  var player = videojs("my-video", {
+    "controls": true,
+    "autoplay": true,
+    "preload": "auto",
+    "playbackRates": [0.5, 1, 1.5, 2],
+    "sources": [{
+      "src": "https://moctobpltc-i.akamaihd.net/hls/live/571329/eight/playlist.m3u8",
+      "type": "application/x-mpegURL"
+    }]
+  });
+</script>
