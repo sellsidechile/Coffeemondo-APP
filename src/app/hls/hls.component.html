@@ -1,20 +1,63 @@
 <style>
-    #sxmvideo {
-        margin-left: 17%;
-        margin-top: 1%;
-    }
-</style>
-  <video id='sxmvideo' width='800' height='500' class="video-js vjs-default-skin" controls>
-    <source
-       [src]="'https://visionsinc.xyz/hls/test.m3u8'"
-       type="application/x-mpegURL">
-  </video>
-  
-  <div class="container" style="margin:20px">
-    <div class="row">
-  
-  
+  #sxmvideo {
+    margin-top: 5%;
+    width: 1300px;
+    height: 600px;
+  }
 
+  #datastudio {
+    width: 1300px;
+    height: 700px;
+  }
+
+  .botones {
+    width: 1300px;
+    justify-content: space-between;
+    color: rgb(235, 97, 42);
+  }
+
+  .btn-camara {
+    width: 200px;
+    background-color: purple;
+    color: orange;
+  }
+
+  .btn-camara:active {
+    background-color: purple;
+  }
+
+  .btn-camara:hover {
+    background-color: purple;
+  }
+
+  .btn-camara:focus {
+    background-color: purple;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-sm-12 text-center">
+      <video id='sxmvideo' width='800' height='500' class="video-js vjs-default-skin vjs-big-play-centered" controls
+        autoplay>
+        <source [src]="'https://visionsinc.xyz/hls/test.m3u8'" type="application/x-mpegURL">
+      </video>
     </div>
-  
+    <div class="botones col-md-12 col-sm-12 d-flex text-center mt-4">
+      <button onclick="OnCamera()" id="encender" class="btn-camara btn mx-auto">Encender Camara</button>
+      <button class="btn-camara btn mx-auto">Apagar Camara</button>
+      <button class="btn-camara btn mx-auto">Zoom In</button>
+      <button class="btn-camara btn mx-auto">Zoom Out</button>
+    </div>
+    <div class="col-md-12 col-sm-12 mt-4">
+      <div class="col-md-12">
+        <iframe id="datastudio"
+          src="https://lookerstudio.google.com/embed/reporting/32e7bee6-09fc-4ebd-a389-52fc9cfcbbfb/page/zf4CD"
+          frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
   </div>
+</div>
+
+
+
+
