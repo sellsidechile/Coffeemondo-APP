@@ -6,6 +6,7 @@ import {
   ElementRef,
   Input
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare const videojs: any;
 
@@ -34,12 +35,59 @@ export class HlsComponent implements OnInit, AfterViewInit {
   private player: any;
 
   // constructor initializes our declared vars
-  constructor(elementRef: ElementRef) {
+  constructor(elementRef: ElementRef,private router: Router) {
+
     // this.url = false;
     this.player = false;
+
+  }
+
+  bd = 'https://coffeemondo-365813-default-rtdb.firebaseio.com/live/';
+
+  EncenderCamara() {
+    if (confirm("¿Está seguro de querer encender la cámara?")) {
+      var Streaming = true
+
+      var datos = {
+        Streaming: Streaming
+      }
+      var datosJson = JSON.stringify(datos);
+      var xhr = new XMLHttpRequest();
+      xhr.open('PATCH', this.bd + '.json', true);
+      xhr.send(datosJson);
+      console.log('Camara encendida')
+      this.player.src({
+        src: 'https://visionsinc.xyz/hls/test.m3u8'
+      });
+      this.player.load();
+    } else {
+      console.log("Cámara no encendida");
+    }
+  }
+
+  ApagarCamara() {
+    if (confirm("¿Está seguro de querer apagar la cámara?")) {
+    var Streaming = false
+
+    var datos = {
+      Streaming: Streaming
+    }
+    var datosJson = JSON.stringify(datos);
+    var xhr = new XMLHttpRequest();
+    xhr.open('PATCH', this.bd + '.json', true);
+    xhr.send(datosJson);
+    console.log('Camara apagada')
+    this.player.src({
+      src: 'https://visionsinc.xyz/hls/test.m3u8'
+    });
+    this.player.load();
+  } else {
+    console.log("Cámara no encendida");
+  }
   }
 
   ngOnInit() { }
+
 
   // use ngAfterViewInit to make sure we initialize the videojs element
   // after the component template itself has been rendered
@@ -126,7 +174,7 @@ export class HlsComponent implements OnInit, AfterViewInit {
 
     this.player.src({
       src: ' https://oocache-live-delivery-ooyala.akamaized.net/out/u/d8npqvovi8we5/110326/N5cmNvZjE6U3nnGeGa0yVC66Gaw-NWxS/en/fda8ba2dd9554ad2b668277730469fea.m3u8'
-    
+
     });
     this.player.play();
     // this.player.controlBar.currentTimeDisplay();  
