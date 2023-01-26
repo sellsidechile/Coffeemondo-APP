@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   isAuth: boolean;
+  isLogin: boolean;
   menuStatus: boolean= true;
   @Input() sideNavStatus: boolean = true;
   @Output() sideNavToggled = new EventEmitter<boolean>();
@@ -17,11 +18,7 @@ export class AppComponent {
   constructor(private readonly google: GoogleApiService, private afAuth: AngularFireAuth,private router: Router){
     this.afAuth.user.subscribe(user => {
       this.isAuth = !!user;
-      if(this.isAuth == true) {
-        this.router.navigate(['/dashboard'])
-      } else {
-        this.router.navigate(['/index'])
-      }
+
     });
 
   }

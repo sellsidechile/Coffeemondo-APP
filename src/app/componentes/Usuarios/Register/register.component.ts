@@ -4,6 +4,7 @@ import { FormControl, FormGroup } from '@angular/forms'
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { UsuariosService } from '../../../services/usuarios.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 
 @Component({
@@ -12,6 +13,8 @@ import { UsuariosService } from '../../../services/usuarios.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  isAuth: boolean;
+  isLogin: boolean;
   
   formReg: FormGroup;
   visible: boolean=true;
@@ -20,7 +23,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     public userService: UsuariosService,
-    public router: Router
+    public router: Router,
+    private afAuth: AngularFireAuth
   ) {
     this.formReg = new FormGroup({
       email: new FormControl(),
@@ -29,6 +33,14 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.afAuth.user.subscribe(user => {
+      this.isAuth = !!user;
+      if(this.isAuth == true) {
+        this.isLogin = true;
+        this.router.navigate(['/dashboard'])
+      }
+      
+    });
     
   }
 

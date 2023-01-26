@@ -2,6 +2,7 @@ import { Token } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import Swal from 'sweetalert2';
 import { UsuariosService } from '../../../services/usuarios.service';
 declare var window: any;
@@ -12,6 +13,8 @@ declare var window: any;
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  isAuth: boolean;
+  isLogin: boolean;
 
   formLogin: FormGroup;
   formModalLog: any;
@@ -20,7 +23,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private userService: UsuariosService,
-    private router: Router
+    private router: Router,
+    private afAuth: AngularFireAuth
   ) {
     this.formLogin = new FormGroup({
       email: new FormControl("", [Validators.required, Validators.email]),
@@ -29,6 +33,14 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.afAuth.user.subscribe(user => {
+      this.isAuth = !!user;
+      if(this.isAuth == true) {
+        this.isLogin = true;
+        this.router.navigate(['/dashboard'])
+      }
+      
+    });
     this.formModalLog = new window.bootstrap.Modal(
       document.getElementById("modalregister"))
   }

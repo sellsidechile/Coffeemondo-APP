@@ -31,8 +31,6 @@ export class SidenavComponent implements OnInit {
   }
 
   onClick(){
-    this.usuariosService.logout()
-      .then(()=>{
         Swal.fire({
           title:"¿Estas seguro?",
           text:"Si cierra sesion va a tener que volver a identificarse.",
@@ -43,12 +41,17 @@ export class SidenavComponent implements OnInit {
           confirmButtonText: "Si, estoy seguro."
         }).then( (result)=> {
           if (result.isConfirmed) {
+            this.usuariosService.logout()
             this.router.navigate(['/index']);
+            //recargar la pagina
+            window.location.reload();
+          } else {
+            this.router.navigate(['/dashboard']);
           }
           
         })
-      })
-      .catch( () => {});
+      }
+  
   }
 
-}
+

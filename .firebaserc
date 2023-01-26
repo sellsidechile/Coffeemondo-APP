@@ -1,14 +1,5 @@
 {
   "projects": {
-<<<<<<< Updated upstream
-    "default": "coffee-mondo",
-    "coffee": "coffee-mondo"
-  },
-  "targets": {},
-  "etags": {}
-}
-=======
     "default": "coffeemondo-365813"
   }
 }
->>>>>>> Stashed changes

@@ -3,6 +3,7 @@ import { UsuariosService } from '../../../services/usuarios.service';
 import { Usuarios } from '../../../usuarios.model';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 
 @Component({
@@ -11,6 +12,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./nlp.component.scss']
 })
 export class NlpComponent implements OnInit {
+  isAuth: boolean;
+  isLogin: boolean;
   Usuarios: Usuarios[]
   menuStatus: boolean= true;
   @Input() sideNavStatus: boolean = false;
@@ -19,10 +22,22 @@ export class NlpComponent implements OnInit {
 
   constructor(
     private usuariosService : UsuariosService,
-    private router : Router
+    private router : Router,
+    private afAuth: AngularFireAuth
   ) { }
 
   ngOnInit(): void {
+    this.afAuth.user.subscribe(user => {
+      this.isAuth = !!user;
+      if(this.isAuth == true) {
+        this.isLogin = true;
+        this.router.navigate(['/nlp'])
+      } else {
+        this.isLogin = false;
+        this.router.navigate(['/index'])
+      }
+      
+    });
     document.getElementsByClassName('modal-backdrop')[0].classList.remove('modal-backdrop')
 
   }

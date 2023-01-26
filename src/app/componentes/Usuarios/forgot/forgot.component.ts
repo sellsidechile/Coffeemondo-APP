@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UsuariosService } from '../../../services/usuarios.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 
@@ -11,10 +12,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./forgot.component.css']
 })
 export class ForgotComponent implements OnInit {
+  isAuth: boolean;
+  isLogin: boolean;
 
   formForgot: FormGroup;
 
   constructor(
+    private afAuth: AngularFireAuth,
     private userService : UsuariosService,
     private router: Router
   ) { 
@@ -24,6 +28,14 @@ export class ForgotComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.afAuth.user.subscribe(user => {
+      this.isAuth = !!user;
+      if(this.isAuth == true) {
+        this.isLogin = true;
+        this.router.navigate(['/dashboard'])
+      }
+      
+    });
   }
 
   onForgot(){
