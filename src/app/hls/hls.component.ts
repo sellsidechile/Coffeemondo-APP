@@ -7,6 +7,7 @@ import {
   Input
 } from '@angular/core';
 import { Router } from '@angular/router';
+import { getIdToken } from 'firebase/auth';
 
 declare const videojs: any;
 
@@ -43,6 +44,7 @@ export class HlsComponent implements OnInit, AfterViewInit {
   }
 
   bd = 'https://coffeemondo-365813-default-rtdb.firebaseio.com/live/';
+  zoomArray = {"zoom":0,"inputLR":0,"inputTB":0}
 
   EncenderCamara() {
     if (confirm("¿Está seguro de querer encender la cámara?")) {
@@ -86,11 +88,52 @@ export class HlsComponent implements OnInit, AfterViewInit {
         src: 'https://visionsinc.xyz/hls/test.m3u8'
       });
       this.player.load();
-    }, 5000 )
+    }, 5000)
     
   } else {
     console.log("Cámara no encendida");
   }
+  }
+  sendData(datos){
+    var datosJson = JSON.stringify(datos);
+    var xhr = new XMLHttpRequest();
+    xhr.open('PATCH', this.bd + '.json', true);
+    xhr.send(datosJson);
+  }
+  
+  ZoomIn(){
+    var send = true;
+    if (this.zoomArray['zoom'] >= 9){
+      this.zoomArray['zoom'] = 9
+      send = false;
+    }
+    else{
+      this.zoomArray['zoom']+=1
+    }
+    var datos = {
+      zoomInput: this.zoomArray
+    }
+    if (send){
+      this.sendData(datos)
+    }
+    
+    
+  }
+  ZoomOut(){
+    var send = true;
+    if (this.zoomArray['zoom'] <= 0){
+      this.zoomArray['zoom'] = 0;
+      send = false;
+    }else{
+      this.zoomArray['zoom']-=1;
+    }
+    var datos = {
+      zoomInput: this.zoomArray
+    }
+    if (send){
+      this.sendData(datos)
+    }
+  
   }
 
   ngOnInit() { }
