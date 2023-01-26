@@ -86,7 +86,7 @@ export class HlsComponent implements OnInit, AfterViewInit {
         src: 'https://visionsinc.xyz/hls/test.m3u8'
       });
       this.player.load();
-    }, 5000)
+    }, 5000 )
     
   } else {
     console.log("Cámara no encendida");
