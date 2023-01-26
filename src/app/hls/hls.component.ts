@@ -55,11 +55,15 @@ export class HlsComponent implements OnInit, AfterViewInit {
       var xhr = new XMLHttpRequest();
       xhr.open('PATCH', this.bd + '.json', true);
       xhr.send(datosJson);
-      console.log('Camara encendida')
-      this.player.src({
-        src: 'https://visionsinc.xyz/hls/test.m3u8'
-      });
-      this.player.load();
+      setTimeout(()=>{
+        console.log('Camara encendida')
+        this.player.src({
+          src: 'https://visionsinc.xyz/hls/test.m3u8'
+        });
+        this.player.load();
+      },6000)
+      
+
     } else {
       console.log("Cámara no encendida");
     }
@@ -77,10 +81,13 @@ export class HlsComponent implements OnInit, AfterViewInit {
     xhr.open('PATCH', this.bd + '.json', true);
     xhr.send(datosJson);
     console.log('Camara apagada')
-    this.player.src({
-      src: 'https://visionsinc.xyz/hls/test.m3u8'
-    });
-    this.player.load();
+    setTimeout(() =>{
+      this.player.src({
+        src: 'https://visionsinc.xyz/hls/test.m3u8'
+      });
+      this.player.load();
+    }, 5000)
+    
   } else {
     console.log("Cámara no encendida");
   }
