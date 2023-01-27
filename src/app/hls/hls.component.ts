@@ -116,8 +116,7 @@ export class HlsComponent implements OnInit, AfterViewInit {
     if (send){
       this.sendData(datos)
     }
-    
-    
+
   }
   ZoomOut(){
     var send = true;
