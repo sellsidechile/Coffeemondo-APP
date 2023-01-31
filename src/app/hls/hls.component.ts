@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { Router } from '@angular/router';
 import { getIdToken } from 'firebase/auth';
+import { max } from 'rxjs';
 
 declare const videojs: any;
 
@@ -15,7 +16,6 @@ declare const videojs: any;
   selector: 'sxm-video',
   templateUrl: './hls.component.html',
 })
-
 export class HlsComponent implements OnInit, AfterViewInit {
 
   // reference to the element itself, we use this to access events and methods
@@ -64,8 +64,7 @@ export class HlsComponent implements OnInit, AfterViewInit {
         });
         this.player.load();
       },6000)
-      
-
+      console.log(this.player.src)
     } else {
       console.log("Cámara no encendida");
     }
@@ -74,7 +73,6 @@ export class HlsComponent implements OnInit, AfterViewInit {
   ApagarCamara() {
     if (confirm("¿Está seguro de querer apagar la cámara?")) {
     var Streaming = false
-
     var datos = {
       Streaming: Streaming
     }
@@ -102,38 +100,85 @@ export class HlsComponent implements OnInit, AfterViewInit {
   }
   
   ZoomIn(){
-    var send = true;
+    this.zoomArray['zoom']+=1
     if (this.zoomArray['zoom'] >= 9){
       this.zoomArray['zoom'] = 9
-      send = false;
-    }
-    else{
-      this.zoomArray['zoom']+=1
     }
     var datos = {
       zoomInput: this.zoomArray
     }
-    if (send){
-      this.sendData(datos)
-    }
+    this.sendData(datos)
+
 
   }
   ZoomOut(){
-    var send = true;
+    this.zoomArray['zoom']-=1;
     if (this.zoomArray['zoom'] <= 0){
       this.zoomArray['zoom'] = 0;
-      send = false;
-    }else{
-      this.zoomArray['zoom']-=1;
+      this.zoomArray['inputTB'] = 0;
+      this.zoomArray['inputLR'] = 0; 
+    }
+    var valueY = this.maxPositionY()
+    if (this.zoomArray['inputTB']  >= valueY){
+      this.zoomArray['inputTB'] = valueY
+    }
+    if (this.zoomArray['inputTB']  <= -valueY){
+      this.zoomArray['inputTB'] = -valueY
+    } 
+    var datos = {
+      zoomInput: this.zoomArray
+    }
+    var ValueX = this.maxPositionX()
+    if (this.zoomArray['inputLR'] >= ValueX){
+      this.zoomArray['inputLR'] = ValueX
+    }
+    if (this.zoomArray['inputLR'] <= - ValueX){
+      this.zoomArray['inputLR'] = -ValueX
+    }
+    this.sendData(datos)
+    
+  
+  }
+  maxPositionY(){
+    var cantZoom = this.zoomArray['zoom']
+    var maxY = (cantZoom * 5 )* 5
+    return maxY
+  }
+
+  moveY(valor:number){
+    this.zoomArray['inputTB'] += valor
+    var maxValue = this.maxPositionY()
+    if (this.zoomArray['inputTB'] > maxValue ){
+     this.zoomArray['inputTB'] = maxValue
+    }
+    if (this.zoomArray['inputTB'] < -maxValue) {
+      this.zoomArray['inputTB'] = -maxValue
     }
     var datos = {
       zoomInput: this.zoomArray
     }
-    if (send){
-      this.sendData(datos)
-    }
-  
+    this.sendData(datos)
   }
+  maxPositionX(){
+    var maxX = ((this.zoomArray['zoom'] * 5 ) * 2 ) * 3
+    return maxX
+  }
+
+  moveX(valor:number){
+    this.zoomArray['inputLR'] += valor
+    var maxValue = this.maxPositionX()
+    if (this.zoomArray['inputLR'] > maxValue){
+      this.zoomArray['inputLR'] = maxValue
+    }
+    if (this.zoomArray['inputLR'] < -maxValue){
+      this.zoomArray['inputLR'] = -maxValue
+    }
+    var datos = {
+      zoomInput: this.zoomArray
+    }
+    this.sendData(datos)
+  }
+
 
   ngOnInit() { }
 
