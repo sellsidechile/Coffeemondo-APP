@@ -1,32 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Document</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1">
 </head>
 
-
 <body>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo right">
-                <img src="../img/logo.png" alt="Avatar Logo" style="width:60px;" class="rounded-pill">
-            </a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
-                <li><a (click)="onClick()">Cerrar Sesión</a></li>
-            </ul>
+
+
+    <div class="container">
+        <div class="shop">
+            <p><a href="shop">Shop</a></p>
+            <p>Shopify</p>
         </div>
-    </nav>
-    <div class="googlegraphic">
-        <iframe width="1170" height="878" src="https://datastudio.google.com/embed/reporting/bc4f0269-9b96-4504-a3b4-d4150cc23255/page/7lf3C" frameborder="0" style="border:0" ></iframe>
+        <div class="plots">
+            <p><a href="plots">Plots</a></p>
+
+        </div>
+        <div class="social">
+            <p><a href="social">Social</a></p>
+
+        </div>
+
+
+        <div class="nlp">
+            <p><a href="nlp">NLP</a></p>
+            <p>
+                Recursos Humanos
+                <br>
+                Índice de felicidad (Análisis de sentimientos)
+            </p>
+        </div>
+        <div class="mantenimiento">
+            <p><a href="mantenimiento">Mantenimiento</a></p>
+            <p>Mantenimientos preventivos</p>
+        </div>
+        <div class="app">
+            <p><a href="app">Aplicación</a></p>
+            <p>Datos app</p>
+        </div>
+        <div class="cx">
+            <p><a href="cx">CX</a></p>
+        </div>
+        <div class="vision">
+            <p><a href="vision">Visión</a></p>
+            <p>
+                Indicador térmico
+                <br>
+                Reconocimiento Facial
+                <br>
+                Reconocimiento de arte latte
+            </p>
+        </div>
     </div>
 
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+    <!-- <df-messenger df-cx="true" location="us-east1" chat-title="Coffeemondo"
+        agent-id="7c4a48a8-f68a-4772-89c9-6e20e275cf1a" language-code="es"></df-messenger> -->
 </body>
+
 </html>

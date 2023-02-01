@@ -1,46 +1,625 @@
-.Home-box{
-  position: relative;
+.navbar {
+    max-width: 101%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(0deg, #ffffff00 0%, rgba(247, 77, 42) 100%);
+    height: 200px;
 }
 
-.home-box-dentro{
-   margin-top: 200px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   width: 600px;
-   height: 800px;
-   background: #330E58;
-   position: absolute;
-   transform: translate(-50%, -50%);
-
-}
-input[type="button"] {
-  margin-top: 5px;
-  margin-left: 15px;
-  width: 150px;
-  height: 25px;
-  background: #D25B37;
-  border: none;
-  border-radius: 2px;
-  color: #FFF;
-  font-family: 'Roboto', sans-serif;
-  font-size: 17px;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: 0.1s ease;
-  cursor: pointer;
+.navbar-collapse{
+    background: hsl(0 0% 100%/ 0.1);
+    backdrop-filter: blur(2rem);
+    position: relative;
+    z-index: 90;
 }
 
-input[type="button"]:hover,
-input[type="button"]:focus {
-  opacity: 0.8;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  transition: 0.1s ease;
+.carousel-indicators{
+    z-index: -2;
 }
 
-input[type="button"]:active {
-  opacity: 1;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  transition: 0.1s ease;
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.logonav {
+    width: 100px;
+    height: 100px;
+}
+
+.titleHead {
+    font-family: "CookieRun Bold";
+    color: #F0DDB5;
+    font-size: 35px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 0px 100px;
+    
+}
+
+@media (max-width: 991px) {
+    .navbar-nav{
+        display: flex;
+        align-items: center;
+        margin-bottom: 100px;
+        
+    }
+
+}
+
+@media (max-width: 991px) {
+    .navbar-nav{
+        display: flex;
+        align-items: center;
+        margin-bottom: 100px;
+        
+    }
+
+}
+
+
+.nav-link {
+    font-size: 20px;
+    font-family: "CookieRun Bold";
+    color: #fff;
+    height: 100%;
+    cursor: pointer;
+
+}
+
+
+
+.nav-item {
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid #fff;
+}
+
+/*CSS GRID */
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 20px auto;
+    display: grid;
+    position: relative;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    z-index: 1;
+}
+
+.container .video {
+    grid-column: span 2;
+    grid-row: span 1;
+    align-items: center;
+}
+
+.container .logo {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.container .aplicacion1 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.container .aplicacion2 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/*CSS GRID */
+
+
+
+
+/*IMAGENES PRIMERA COLUMNA */
+.imagen1 {
+    position: relative;
+
+}
+
+.imageninfo1 {
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.imagen1 .textotop {
+    position: absolute;
+    height: auto;
+    top: 8px;
+    left: 16px;
+    color: #fff;
+    font-family: "CookieRun Bold";
+    font-size: 2vw;
+}
+
+.imagen1 .textobottom {
+    position: absolute;
+    height: auto;
+    bottom: 8px;
+    right: 16px;
+    color: #fff;
+
+}
+
+.imagen2 {
+    position: relative;
+}
+
+.imageninfo2 {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.imagen2 .textotop {
+    position: absolute;
+    height: auto;
+    top: 8px;
+    left: 16px;
+    color: #fff;
+    font-family: "CookieRun Bold";
+    font-size: 2vw;
+}
+
+.imagen2 .textobottom {
+    position: absolute;
+    height: auto;
+    bottom: 8px;
+    right: 16px;
+    color: #fff;
+
+}
+
+/*IMAGENES PRIMERA COLUMNA */
+
+
+/*IMAGENES SEGUNDA COLUMNA */
+.videont {
+    width: 100%;
+    height: auto;
+}
+
+/*IMAGENES SEGUNDA COLUMNA */
+
+/*TERCERA COLUMNA */
+
+.logotext {
+    font-family: "CookieRun Bold";
+    color: #F0DDB5;
+    font-size: 35px;
+}
+
+.containerlogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.logoimg {
+    width: 170px;
+    height: 170px;
+    margin-top: 80px;
+}
+
+.textocoffe {
+    color: #F0DDB5;
+    display: flex;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 0px 50px;
+    text-align: center;
+}
+
+.disponibletext {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 60px;
+}
+
+/*TERCERA COLUMNA */
+
+
+/*CUARTA COLUMNA */
+
+.dispologos{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+    margin-bottom: 70px;
+}
+
+
+.logodownload {
+width: 60%;
+height: auto;
+margin-right: 50px;
+
+}
+
+.appstore{
+width: 60%;
+height: auto;
+
+margin-left: 70px;
+border-radius: 10px;
+}
+
+
+
+/*CUARTA COLUMNA */
+
+
+
+
+.imagen {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+
+/*CSS GRID */
+.containerservice {
+    width: 60%;
+    height: 60%;
+    margin: 20px auto;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+.containerservice .titulo {
+    grid-column: span 2;
+    grid-row: span 1;
+    
+
+}
+
+.containerservice .servicio1 {
+    grid-column: span 1;
+    grid-row: span 1;
+
+}
+
+.containerservice .servicio2 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.containerservice .servicio3 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.containerservice .servicio4 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+
+/*CSS GRID */
+
+/* .containerservice>div {
+    background: #e68264;
+    border-radius: 4px;
+} */
+
+/*TITULO */
+.textservices {
+    font-size: 30px;
+    margin: 60px 0px;
+    font-family: "PTSans-Bold";
+    color: #61269c;
+}
+
+/*TITULO */
+
+
+/*PRIMERA IMAGEN */
+.servicio1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.imgserv1 {
+    width: 90%;
+    height: auto;
+}
+
+/*PRIMERA IMAGEN */
+
+
+/*SEGUNDA IMAGEN */
+.servicio2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.imgserv2 {
+    width: 90%;
+    height: auto;
+}
+
+/*SEGUNDA IMAGEN */
+
+
+/*TERCERA IMAGEN */
+.servicio3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.imgserv3 {
+    width: 90%;
+    height: auto;
+}
+
+/*TERCERA IMAGEN */
+
+
+/*CUARTA IMAGEN */
+.servicio4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.imgserv4 {
+    width: 90%;
+    height: auto;
+}
+
+/*CUARTA IMAGEN */
+
+
+.containerservice {
+
+    background-color: #F0DDB5;
+    width: 100%;
+    height: auto;
+    padding-bottom: 100px;
+}
+
+.textservices {
+    font-size: 30px;
+    margin: 60px 0px;
+    font-family: "PTSans-Bold";
+}
+
+// .rowserv {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: row;
+// }
+
+// .contserving {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     grid-gap: 10px;
+//     grid-rows: repeat(2, 1fr);
+// }
+
+// .imgserv {
+//     width: 400px;
+// }
+
+// .archivements {
+//     width: 100%;
+//     height: auto;
+// }
+
+// .contArchivements {
+//     width: 100%;
+//     height: fit-content;
+//     background-image: url(../../../assets/coffe.png);
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 100px 0px;
+// }
+
+// .colArchivements {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     background-color: #f0ddb5c8;
+//     width: 1200px;
+//     padding: 100px 50px 20px 50px;
+//     margin-top: 380px;
+// }
+
+// .rowArchivements {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     flex-direction: row;
+//     width: 100%;
+// }
+
+// .relArchv {
+//     position: relative;
+
+// }
+
+// .textArchv {
+//     position: absolute;
+//     bottom: 13px;
+//     left: 40%;
+//     font-family: "PTSans-Bold";
+//     color: #fff;
+//     font-size: 15px;
+// }
+
+// .practice {
+//     margin-bottom: 50px;
+//     font-family: "PTSans-Bold";
+//     color: #61269c;
+//     font-size: 30px;
+// }
+
+// .knowArchv {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: row;
+//     margin-top: 20px;
+
+// }
+
+// .knowArchv span {
+//     font-family: "PTSans-Bold";
+//     color: #61269c;
+//     font-size: 15px;
+//     min-height: 70%;
+// }
+
+
+.conlogro{
+    width: 100%;
+    height: fit-content;
+    background-image: url(../../../assets/coffe.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+}
+
+
+
+.containerlogro {
+
+    margin: 20px auto;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 20px;
+    background-color: #f0ddb5c8;
+    width: 1200px;
+    padding: 100px 50px 20px 50px;
+    margin-top: 300px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+.containerlogro .titulologro{
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+.containerlogro .desclogro{
+    grid-column: span 2;
+}
+
+.containerlogro .botonlogro{
+    grid-column: span 2;
+}
+
+
+.practice {
+    margin-bottom: 50px;
+    font-family: "PTSans-Bold";
+    color: #61269c;
+    font-size: calc(1em + 2vw);
+}
+
+.logro1{
+    position: relative;
+}
+.logro2{
+    position: relative;
+}
+.logro3{
+    position: relative;
+}
+.logro4{
+    position: relative;
+}
+
+.archivements{
+    width: 100%;
+    height: auto;
+}
+
+.textArchv{
+    position: absolute;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "PTSans-Bold";
+    color: rgb(10, 10, 10);
+    font-size: calc(0.3em + 0.5vw);
+}
+
+.desclogro span{
+    font-family: "PTSans-Bold";
+    color: #61269c;
+    font-size: calc(0.5em + 1vw);
+    text-align: center;
+}
+
+.knowing{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.modal {
+    width: 100%;
+    height: auto;
+
+}
+
+.modal-content {
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+
+}
+
+app-login {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-control-prev {
+    height: 100px;
+    margin-top: 500px;
+}
+
+.carousel-control-next {
+    height: 100px;
+    margin-top: 500px;
 }

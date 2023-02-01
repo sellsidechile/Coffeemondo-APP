@@ -1,0 +1,31 @@
+<div class="container">
+  <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+    <div class="ingreso">
+      <span>Ingreso</span>
+    </div>
+    <div class="loginBox">
+
+      <div class="form">
+        <div class="contform"><img src="../../../../assets/user.png"> <input type="email" id="email"
+            formControlName="email"></div>
+        <div class="contform"><img src="../../../../assets/candado.svg"> <input type="password" id="password"
+            formControlName="password" /></div>
+        <a class="forgot" href="/forgot">¿Olvidaste tu contraseña?</a>
+      </div>
+    </div>
+    <div class="botons">
+      <input class="submit" type="submit" id="login" name="login_submit" value="ENTRAR" data-backdrop="false">
+      <input class="soyNuevo" type="button" value="SOY NUEVO" (click)="openModelLog()" data-bs-dismiss="modal">
+    </div>
+  </form>
+  <button class="social-signin google" (click)="onClick()" > <img
+    src="../../../../assets/google.jpg"> 
+  </button>
+</div>
+<div class="modal" id="modalReg" >
+  <div class="modal-dialog modal-dialog-centered" style="max-width:771px; max-height:479px;">
+    <div class="modal-content" >
+      <app-register></app-register>
+    </div>
+  </div>
+</div>

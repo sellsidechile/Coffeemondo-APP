@@ -1,0 +1,22 @@
+<div class="container">
+  <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
+    <div class="registro">
+      <span>Registro</span>
+    </div>
+    <div class="loginBox">
+
+      <div class="form">
+        <div class="contform"><img src="../../../../assets/user.png"> <input type="email" id="email"
+            formControlName="email"></div>
+        <div class="contform"><img src="../../../../assets/candado.svg"> <input [type]="changetype? 'password':'text'" id="password"
+            formControlName="password" /> </div>
+      </div>
+    </div>
+    <div class="botons">
+      <input class="Registrar" type="submit" id="signUp" name="signup_submit" value="Registrarte">
+    </div>
+  </form>
+  <button class="social-signin google" (click)="onClick()"> <img
+    src="../../../../assets/google.jpg"> 
+</button>
+</div>
