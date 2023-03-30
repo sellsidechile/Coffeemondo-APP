@@ -15,13 +15,14 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: "AIzaSyAp5D6hgldoFCggq7c2sj5_d9LuRGHQFvc",
+    apiKey: "AIzaSyB-m9M_6qRLU1jAKaVSaX12puFKZWZ9s-Y",
     authDomain: "coffeemondo-365813.firebaseapp.com",
+    databaseURL: "https://coffeemondo-365813-default-rtdb.firebaseio.com",
     projectId: "coffeemondo-365813",
     storageBucket: "coffeemondo-365813.appspot.com",
     messagingSenderId: "661225577781",
-    appId: "1:661225577781:web:1bfe8f7e1ec285cb5c807c",
-    measurementId: "G-7BQ0WB8G4Z"
+    appId: "1:661225577781:web:e78766aa3d3b3fea5c807c",
+    measurementId: "G-ML5W3LJJXD"
   }
 };
 
