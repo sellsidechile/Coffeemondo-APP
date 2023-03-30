@@ -60,7 +60,7 @@ export class HlsComponent implements OnInit, AfterViewInit {
       setTimeout(()=>{
         console.log('Camara encendida')
         this.player.src({
-          src: 'https://visionsinc.xyz/hls/test.m3u8'
+          src: 'https://www.visionsinc.xyz/hls/test.m3u8'
         });
         this.player.load();
       },6000)
@@ -83,7 +83,7 @@ export class HlsComponent implements OnInit, AfterViewInit {
     console.log('Camara apagada')
     setTimeout(() =>{
       this.player.src({
-        src: 'https://visionsinc.xyz/hls/test.m3u8'
+        src: 'https://www.visionsinc.xyz/hls/test.m3u8'
       });
       this.player.load();
     }, 5000)
